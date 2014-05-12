@@ -6,11 +6,14 @@ package sudoku;
  */
 public class Player {
     String name;
+    long wins;
+    double gametime;
+    double totaltime;
     
     public Player() {
     }
     
     public void displayName() {
-        System.out.println("\t\tGreetings, my name is "  + this.name); 
+        System.out.println("\t\tHello, my name is "  + this.name); 
     }
 }

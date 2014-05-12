@@ -10,6 +10,7 @@ public class Sudoku {
     String welcomeMessage =
               "\n\t***********************************************************************"
             + "\n\t* Welcome to the game of Sudoku!                                      *"       
+            + "\n\t* More text should go here...                                         *"
             + "\n\t*                                                                     *"
             + "\n\t* Good Luck!!!                                                        *"
             + "\n\t***********************************************************************"
@@ -21,13 +22,13 @@ public class Sudoku {
     
     public static void main(String[] args) {
         Sudoku sudoku = new Sudoku();
-        Sudoku.display();
+        sudoku.display();
         
-        Board board = new Board();
-        board.displaySize();
+        Grid grid = new Grid();
+        grid.displaySize();
         
         Game game = new Game();
-        //game.displayPlayers();
+        game.displayPlayer();
     }
     
     private void display() {

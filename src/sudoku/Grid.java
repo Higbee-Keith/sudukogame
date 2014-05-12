@@ -4,14 +4,14 @@ package sudoku;
  *
  * @author Higbee-Keith
  */
-public class Board {
+public class Grid {
     int givenNumbers = 23;
     
-    public Board(){
+    public Grid(){
     }
     
     public void displaySize() {
         System.out.println("This game has predetermined "  
-                + givenNumbers + " spaces for you.");
+                + givenNumbers + " numbers for you.");
     }
 }
