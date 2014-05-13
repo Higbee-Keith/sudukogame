@@ -1,10 +1,12 @@
 package sudoku;
+import java.util.Scanner; //Reads input from System.in
 
 /**
  *
  * @author Higbee-Keith
  */
 public class Player {
+    //declare variables
     String name;
     long wins;
     double gametime;
@@ -14,6 +16,8 @@ public class Player {
     }
     
     public void displayName() {
-        System.out.println("\t\tHello, my name is "  + this.name); 
+        Scanner getName = new Scanner(System.in);
+        System.out.println("\nPlease enter your name.");
+        name = getName.nextLine();
     }
 }

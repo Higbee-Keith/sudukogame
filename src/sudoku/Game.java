@@ -13,10 +13,12 @@ public class Game {
     
     public Game() {
         this.player = new Player();
-        this.player.name = "Sudoku Master";
+        //this.player.name = player.displayName();
+        player.displayName();
     }
     
     public void displayPlayer() {
-        System.out.println("Are you ready to play, " + this.player.name + "?");
+        System.out.println("\n\tHello, "  + this.player.name + ".  Enjoy your game!");
     }
+    
 }

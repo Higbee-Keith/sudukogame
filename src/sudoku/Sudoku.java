@@ -29,10 +29,12 @@ public class Sudoku {
         
         Game game = new Game();
         game.displayPlayer();
+        
+        
     }
     
     private void display() {
         System.out.println(this.welcomeMessage);
     }
-    
+
 }
