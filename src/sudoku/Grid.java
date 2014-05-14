@@ -12,16 +12,17 @@ public class Grid {
     public Grid(){
     }
     
-    private int getGridSize() {
+    private int getInitialGridNumbers() {
         //Declare a new Scanner input
         Scanner input = new Scanner(System.in);
         
+        //Get number from user and return the value
         System.out.println("How many numbers would you like to start with?");
         return givenNumbers = input.nextInt();              
     }
     
     public void displaySize() {
-        getGridSize();
+        getInitialGridNumbers();
         System.out.println("Your game will start with " + givenNumbers + 
                 " numbers already completed for you.");
     }

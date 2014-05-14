@@ -35,6 +35,7 @@ public class Sudoku {
     
     private void display() {
         System.out.println(this.welcomeMessage);
+        
     }
 
 }
