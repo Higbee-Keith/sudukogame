@@ -3,7 +3,7 @@ import java.util.Scanner; //Reads input from System.in
 
 /**
  *
- * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez
+ * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez, Daniel Allen
  */
 
 public class Game {
