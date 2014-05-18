@@ -38,4 +38,24 @@ public class Sudoku {
         
     }
 
+/**
+ * @author Allen-Daniel
+ * Check 9 boxes for completion
+ */
+    
+    String correctMessage =
+        "\n\t This section is correct."       
+      + "\n";
+    
+    String incorrectMessage =
+        "\n\t This section is incorrect."       
+      + "\n";
+       
+    private boolean blockcheck(byte a, byte b, byte c, byte d, byte e, byte f, byte g, byte h, byte i) {
+        if (a + b + c + d + e + f + g + h + i == 45){
+            return true;
+        }
+            return false;
+    }
+
 }
