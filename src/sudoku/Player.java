@@ -3,8 +3,9 @@ import java.util.Scanner; //Reads input from System.in
 
 /**
  *
- * @author Higbee-Keith
+ * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez
  */
+
 public class Player {
     //declare variables
     String name;
@@ -19,19 +20,16 @@ public class Player {
     public Player() {
     }
     
-    public void displayName() {
-        //Scanner getName = new Scanner(System.in);
-        //System.out.println("\nPlease enter your name.");
-        //name = getName.nextLine();
-        calculatedTax();
-    }
-    
-    public double calculatedTax() {
-        //the following lines are for the tax function
-        //for Week3 Paired Programming assignment
+    public void getName() {
         Scanner getName = new Scanner(System.in);
         System.out.println("\nPlease enter your name.");
         name = getName.nextLine();
+    }
+    
+
+    public double calculatedTax() {
+        //the following lines are for the tax function
+        //for Week3 Paired Programming assignment
         
         Scanner getIncome = new Scanner(System.in);
         System.out.println("\nPlease enter your income.");
@@ -54,8 +52,8 @@ public class Player {
         
         total = income - tax;
         
-        System.out.println("Hello " + name + ".  You owe " + tax + "in taxes.");
-        System.out.println("\nYour total income after taxes is: " + total + ".");        
+        System.out.println("Hello " + name + ".  You owe $" + tax + " in taxes.");
+        System.out.println("\nYour total income after taxes is: $" + total + ".");        
         return tax;            
     }
 }

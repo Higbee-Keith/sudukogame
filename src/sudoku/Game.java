@@ -1,25 +1,44 @@
-
 package sudoku;
+import java.util.Scanner; //Reads input from System.in
 
 /**
  *
- * @author imac
+ * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez
  */
+
 public class Game {
     //Need to determine a solution to a game before starting a new game.
     //No point in playing a game without a solution!
-    //Size of game to be pulled from Board.java
+    //Size of game to be pulled from Grid.java
     
     //Declare a new player object
     Player player;
     
     public Game() {
         this.player = new Player();
-        player.displayName();
+        player.getName();
+        player.calculatedTax();
     }
     
     public void displayPlayer() {
-        System.out.println("\nHello, "  + this.player.name + ".  Enjoy your game!");
+        System.out.println("\nHello, "  + this.player.name + ".");
+    }
+    
+    public void displayHelp() {
+        String help;
+        
+        Scanner input = new Scanner(System.in);
+        System.out.println("\nWould you like to review the instructions?  y or n");
+        help = input.nextLine();
+        if (help.equals("y"))
+            System.out.print("\nThe game of Sudoku is a number placement puzzle."
+                            + "\nIt consists of a 9x9 grid which contains nine 3x3 regions.  Each "
+                            + "\nregion must contain each number of 1-9.  In addition, the entire"
+                            + "\nrow and column a number resides in must not contain the same number."
+                            + "\nSo to successfully complete the puzzle, each row and column "
+                            + "\nmust contain unique numbers\n");
+        else
+            System.out.println("\nNo instuctions eh?  Okay.  Enjoy your game!\n");
     }
     
 }

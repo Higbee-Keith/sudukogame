@@ -2,7 +2,7 @@ package sudoku;
 
 /**
  *
- * @author Higbee-Keith
+ * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez
  */
 
 public class Sudoku {
@@ -29,13 +29,14 @@ public class Sudoku {
         
         Game game = new Game();
         game.displayPlayer();
+        game.displayHelp();
         
-        
+        grid.percentCompletion();
     }
     
     private void display() {
         System.out.println(this.welcomeMessage);
         
     }
-
+    
 }
