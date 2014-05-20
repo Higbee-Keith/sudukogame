@@ -19,28 +19,33 @@ public class HelpMenuControl {
         
     }
     
-    //menu option method1
-    public void OptionOne() {
+    //menu option displayBoardHelp
+    //Josiah to code this
+    public void displayBoardHelp() {
         
     }
     
-    //menu option method2
-    public void OptionTwo() {
+    //menu option displayNumbersHelp
+    //Daniel to code this
+    public void displayNumbersHelp() {
         
     }
     
-    //menu option method3
-    public void OptionThree() {
+    //menu option displayPlayerHelp
+    //Jessie to code this
+    public void displayPlayerHelp() {
         
     }
     
-    //menu option method4
-    public void OptionFour() {
+    //menu option displayStatisticsHelp
+    //Keith to code this
+    public void displayStatisticsHelp() {
         
     }
     
-    //menu option method5    
-    public void OptionFive() {
+    //menu option displayEndGameHelp    
+    //Jae to code this
+    public void displayEndGameHelp() {
         
     }
 }

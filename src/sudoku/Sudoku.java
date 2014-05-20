@@ -32,6 +32,9 @@ public class Sudoku {
         game.displayHelp();
         
         grid.percentCompletion();
+        
+        HelpMenuView help = new HelpMenuView();
+        help.getInput();
     }
     
     private void display() {
