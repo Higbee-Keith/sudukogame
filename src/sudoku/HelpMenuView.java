@@ -29,6 +29,7 @@ public class HelpMenuView {
         {"P", "Player help"},
         {"S", "Statistics help"},
         {"E", "End game help"},
+        {"R", "Return to main menu"},
         {"Q", "QUIT"}
     };
     
@@ -49,8 +50,9 @@ public class HelpMenuView {
             this.display(); //displays the display method from this class
             
             //get the input command entered by user
+            System.out.println("\nPlease enter a valid command");
             input = getCommand.nextLine();
-            input = input.trim().toUpperCase();  //to check on later....
+            input = input.trim().toUpperCase();  //forces input to validate to uppercase
             
             switch (input) {
                 case "B":
@@ -68,6 +70,9 @@ public class HelpMenuView {
                 case "E":
                     this.helpMenuControl.displayEndGameHelp();
                     break;
+                case "R":
+                    this.helpMenuControl.displayReturnToMainMenu();
+                    break;
                 case "Q":
                     break;
                 default:
@@ -80,11 +85,12 @@ public class HelpMenuView {
     
     //displays the help menu
     public void display() {
-        System.out.println("\n......................................");
-        
+        System.out.println("\n**************************************************");
         //for loop to cycle through array of menu items
+        System.out.println("\t\tHelp Menu\n");
         for (int i = 0; i < HelpMenuView.helpMenuItems.length; i++) {
             System.out.println("\t " + helpMenuItems[i][0] + "\t" + helpMenuItems[i][1]);
         }
+        System.out.println("**************************************************");
     }
 }

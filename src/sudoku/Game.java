@@ -17,7 +17,7 @@ public class Game {
     public Game() {
         this.player = new Player();
         player.getName();
-        player.calculatedTax();
+        //player.calculatedTax();  REMOVE THIS LINE AND ASSOCIATED METHOD
     }
     
     public void displayPlayer() {

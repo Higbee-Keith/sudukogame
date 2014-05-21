@@ -13,7 +13,7 @@ public class Player {
     double gametime;
     double totaltime;
     
-    //declare variables for tax function
+    //declare variables for tax function - TO BE REMOVED BEFORE FINAL
     double moneymade, tax, total;
     int income;
     
@@ -27,7 +27,7 @@ public class Player {
     }
     
 
-    public double calculatedTax() {
+    public double calculatedTax() { //THIS METHOD SHOULD BE REMOVED BEFORE FINAL
         //the following lines are for the tax function
         //for Week3 Paired Programming assignment
         

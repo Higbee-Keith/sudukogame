@@ -40,12 +40,28 @@ public class HelpMenuControl {
     //menu option displayStatisticsHelp
     //Keith to code this
     public void displayStatisticsHelp() {
-        
+        displayHelpBorder();
+        System.out.println("\t\tStatistics Help");
+        System.out.println("\n\tThe statistics show how many numbers are \n" +
+                "currently correct and how many numbers are currently \n" +
+                "incorrect.  They also calculate and show the percentage \n" +
+                "of correct numbers.\n");
+        displayHelpBorder();
     }
     
     //menu option displayEndGameHelp    
     //Jae to code this
     public void displayEndGameHelp() {
         
+    }
+    
+    //to be completed when main menu classes are created
+    public void displayReturnToMainMenu() {
+        
+    }
+    
+    public void displayHelpBorder() {
+        System.out.println(
+                "------------------------------------------------------------");
     }
 }
