@@ -57,7 +57,8 @@ public class HelpMenuControl {
     
     //to be completed when main menu classes are created
     public void displayReturnToMainMenu() {
-        
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.getInput();
     }
     
     public void displayHelpBorder() {
