@@ -19,14 +19,18 @@ public class MainMenuControl {
     
     //menu option displayPlayerOptions
     public void displayPlayerOptions() {
-        PlayerMenuView playerMenuView = new PlayerMenuView();
-        playerMenuView.getInput();
+        System.out.println("The player menu has been called.");
+        //Uncomment these commands with the menu is complete
+        //PlayerMenuView playerMenuView = new PlayerMenuView();
+        //playerMenuView.getInput();
     }
     
     //menu option displayPreferences
     public void displayGamePreferences() {
-        GamePreferencesView gamePreferencesView = new GamePreferencesView();
-        gamePreferencesView.getInput();
+        System.out.println("The game preferences menu has been called");
+        //Uncomment these commands when the menu is complete
+        //GamePreferencesView gamePreferencesView = new GamePreferencesView();
+        //gamePreferencesView.getInput();
     }
     
     //menu option displayHelpMenu
