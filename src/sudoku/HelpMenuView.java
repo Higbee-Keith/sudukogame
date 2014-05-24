@@ -29,8 +29,7 @@ public class HelpMenuView {
         {"P", "Player help"},
         {"S", "Statistics help"},
         {"E", "End game help"},
-        {"R", "Return to main menu"},
-        {"Q", "QUIT"}
+        {"R", "Return to main menu"}
     };
     
     //create instance of HelpMenuControl
@@ -73,8 +72,6 @@ public class HelpMenuView {
                 case "R":
                     this.helpMenuControl.displayReturnToMainMenu();
                     break;
-                case "Q":
-                    break;
                 default:
                     System.out.println("Please enter a valid command");
                     continue;                    
@@ -85,12 +82,12 @@ public class HelpMenuView {
     
     //displays the help menu
     public void display() {
-        System.out.println("\n**************************************************");
+        System.out.println("\n**************************************************\n");
         //for loop to cycle through array of menu items
         System.out.println("\t\tHelp Menu\n");
         for (int i = 0; i < HelpMenuView.helpMenuItems.length; i++) {
             System.out.println("\t " + helpMenuItems[i][0] + "\t" + helpMenuItems[i][1]);
         }
-        System.out.println("**************************************************");
+        System.out.println("\n**************************************************");
     }
 }

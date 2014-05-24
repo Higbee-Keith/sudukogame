@@ -21,20 +21,23 @@ public class Sudoku {
     }
     
     public static void main(String[] args) {
-        Sudoku sudoku = new Sudoku();
-        sudoku.display();
+        //Sudoku sudoku = new Sudoku();
+        //sudoku.display();
         
-        Grid grid = new Grid();
-        grid.displaySize();
+        //Grid grid = new Grid();
+        //grid.displaySize();
         
-        Game game = new Game();
-        game.displayPlayer();
-        game.displayHelp();
+        //Game game = new Game();
+        //game.displayPlayer();
+        //game.displayHelp();
         
-        grid.percentCompletion();
+        //grid.percentCompletion();
         
-        HelpMenuView help = new HelpMenuView();
-        help.getInput();
+        //HelpMenuView help = new HelpMenuView();
+        //help.getInput();
+        
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.getInput();
     }
     
     private void display() {

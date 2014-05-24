@@ -1,15 +1,42 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package sudoku;
 
 /**
  *
- * @author imac
+ * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez, Daniel Allen
  */
+
 public class MainMenuControl {
     
+    //default constructor
+    public MainMenuControl () {
+        
+    }
+    
+    //menu option displayNewGame
+    public void displayNewGame() {
+        
+    }
+    
+    //menu option displayPlayerOptions
+    public void displayPlayerOptions() {
+        PlayerMenuView playerMenuView = new PlayerMenuView();
+        playerMenuView.getInput();
+    }
+    
+    //menu option displayPreferences
+    public void displayGamePreferences() {
+        GamePreferencesView gamePreferencesView = new GamePreferencesView();
+        gamePreferencesView.getInput();
+    }
+    
+    //menu option displayHelpMenu
+    public void displayHelpMenu() {
+        HelpMenuView helpMenuView = new HelpMenuView();
+        helpMenuView.getInput();
+    }
+    
+    public void displayHelpBorder() {
+        System.out.println(
+                "------------------------------------------------------------");
+    }
 }
