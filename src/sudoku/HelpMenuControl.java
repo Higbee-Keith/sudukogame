@@ -20,7 +20,12 @@ public class HelpMenuControl {
     
     //menu option displayNumbersHelp
     //Daniel to code this
-    public void displayNumbersHelp() {
+        public void displayNumbersHelp() {
+        System.out.println("\t\tNumbers Help");
+        System.out.println("\n\tInsert the numbers 1-9 into every row, column, and box."
+                + "\nEvery row, column and box can only use each number once. "
+                + "\nOnce every box is filled correctly, the game will be solved! \n");
+    }
         
     }
     
