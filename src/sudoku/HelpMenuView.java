@@ -62,7 +62,7 @@ public class HelpMenuView {
                     System.out.println("Please enter a valid command");
                     continue;                    
             } 
-        } while (!input.equals("Q"));
+        } while (!input.equals("R"));
         return;
     }
     
