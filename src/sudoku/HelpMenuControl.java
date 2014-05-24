@@ -34,6 +34,13 @@ public class HelpMenuControl {
     //menu option displayPlayerHelp
     //Jessie to code this
     public void displayPlayerHelp() {
+        displayHelpBorder();
+        System.out.println("\t\tPlayer Help");
+        System.out.println("\n\tThe player inserts numbers 1-9 in the empty "
+                + "locations. The game is finished once the player successfully "
+                + "fills in every location without repeating a number in any "
+                + "given column or row. \n");
+        displayHelpBorder();
         
     }
     
