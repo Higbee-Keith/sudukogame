@@ -55,7 +55,14 @@ public class HelpMenuControl {
     //menu option displayEndGameHelp    
     //Jae to code this
     public void displayEndGameHelp() {
-        
+        displayHelpBorder();
+        System.out.println("\t\tEnding the Game Help");
+        System.out.println("\n\tThe game ends either when the player\n"
+                + "successfully completes the Sudoku puzzle correctly, or\n"
+                + "if the player gets stuck and chooses to give up.  If the \n"
+                + "player chooses to give up, the correct answers are shown, \n"
+                + "and a new game must be started");
+        displayHelpBorder();
     }
     
     //menu option displayReturnToMainMenu
