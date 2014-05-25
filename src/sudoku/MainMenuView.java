@@ -17,7 +17,7 @@ public class MainMenuView {
         {"Q", "QUIT"}
     };
     
-    //create instance of HelpMenuControl
+    //create instance of MainMenuControl
     private MainMenuControl mainMenuControl = new MainMenuControl();
     
     //default constructor
