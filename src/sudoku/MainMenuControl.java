@@ -21,8 +21,8 @@ public class MainMenuControl {
     public void displayPlayerOptions() {
         System.out.println("The player menu has been called.");
         //Uncomment these commands with the menu is complete
-        //PlayerMenuView playerMenuView = new PlayerMenuView();
-        //playerMenuView.getInput();
+        PlayerMenuView playerMenuView = new PlayerMenuView();
+        playerMenuView.getInput();
     }
     
     //menu option displayPreferences
