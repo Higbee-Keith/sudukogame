@@ -52,7 +52,7 @@ public class MainMenuView {
                     this.mainMenuControl.displayHelpMenu();
                     break;
                 case "Q":
-                    break;
+                    System.exit(0);
                 default:
                     System.out.println("Please enter a valid command");
                     continue;                    
