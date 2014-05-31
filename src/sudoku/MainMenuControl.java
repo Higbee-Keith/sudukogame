@@ -14,23 +14,20 @@ public class MainMenuControl {
     
     //menu option displayNewGame
     public void displayNewGame() {
-        
+        Grid newGrid = new Grid();
+        newGrid.newGame();
     }
     
     //menu option displayPlayerOptions
     public void displayPlayerOptions() {
-        System.out.println("The player menu has been called.");
-        //Uncomment these commands with the menu is complete
         PlayerMenuView playerMenuView = new PlayerMenuView();
         playerMenuView.getInput();
     }
     
     //menu option displayPreferences
     public void displayGamePreferences() {
-        System.out.println("The game preferences menu has been called");
-        //Uncomment these commands when the menu is complete
-        //GamePreferencesView gamePreferencesView = new GamePreferencesView();
-        //gamePreferencesView.getInput();
+        GamePreferencesView gamePreferencesView = new GamePreferencesView();
+        gamePreferencesView.getInput();
     }
     
     //menu option displayHelpMenu

@@ -12,7 +12,7 @@ public class PlayerMenuView {
     // create an array of strings to act as player menu items
     private final static String [][] playerMenuItems = {
         {"N", "Enter Player's Name"},
-        {"X", "Back to Main Menu"}
+        {"R", "Return to Main Menu"}
             
             };
     

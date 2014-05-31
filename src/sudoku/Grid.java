@@ -1,5 +1,5 @@
 package sudoku;
-import java.util.Scanner; //Reads input from System.in
+import java.util.*; //Reads input from System.in
 
 /**
  *
@@ -7,22 +7,50 @@ import java.util.Scanner; //Reads input from System.in
  */
 
 public class Grid {
-    //declare variables
-    int givenNumbers;
-        
     //declare contstants (used in percentCompletion function
     static final int TOTAL_CELLS = 81;
+    static final int ROWS = 9;
+    static final int COLS = 9;
+    static final int REGIONS = 27;
+    
+    //declare variables and arrays
+    int rows, cols;
+    private int[][] game;  //generate game array
+    private int[][] gamePositions = new int[ROWS][COLS];
     
     //declare variables for percentCompletion function
-    double startingCells, correctCells, incorrectCells;
-    int modifiedCells = 4; //this is only temporary
-    double percentComplete;
-      
-        
+    //double startingCells, correctCells, incorrectCells;
+    //int modifiedCells = 4; //this is only temporary
+    //double percentComplete;
+    
+    //constructor    
     public Grid(){
+        
     }
     
-    private int getInitialGridNumbers() {
+    public void newGame() {
+        game(ROWS,COLS);
+        
+    }
+    
+    public void game(int r, int c) {
+        rows = r;
+        cols = c;
+        
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++)
+            {
+                //currently uses numbers 0 - 9
+                //and does not check for duplicates
+                //gamePositions[i][j] = (int)(10*Math.random());
+                gamePositions[i][j] = (int)(10*Math.random());
+                System.out.print(gamePositions[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    /*private int getInitialGridNumbers() {
         //Declare a new Scanner input
         Scanner input = new Scanner(System.in);
         
@@ -51,5 +79,5 @@ public class Grid {
                             + incorrectCells + " incorrect cells.\nThe game is "
                             + percentComplete + "% complete.");
         return percentComplete;
-    }
+    }*/
 }
