@@ -59,10 +59,12 @@ public class Sudoku {
       + "\n";
        
     private boolean blockcheck(byte a, byte b, byte c, byte d, byte e, byte f, byte g, byte h, byte i) {
+        for(int x = 45; a + b + c + d + e + f + g + h + i != x; ) {
+         System.out.print(incorrectMessage);
+      }
         if (a + b + c + d + e + f + g + h + i == 45){
             return true;
         }
             return false;
     }
-
 }
