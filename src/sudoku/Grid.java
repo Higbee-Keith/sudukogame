@@ -42,13 +42,14 @@ public class Grid {
             {
                 //currently uses numbers 0 - 9
                 //and does not check for duplicates
-                //gamePositions[i][j] = (int)(10*Math.random());
                 gamePositions[i][j] = (int)(10*Math.random());
                 System.out.print(gamePositions[i][j] + " ");
             }
             System.out.println();
         }
     }
+    
+
 
     /*private int getInitialGridNumbers() {
         //Declare a new Scanner input

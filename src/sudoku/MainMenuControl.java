@@ -14,8 +14,11 @@ public class MainMenuControl {
     
     //menu option displayNewGame
     public void displayNewGame() {
-        Grid newGrid = new Grid();
-        newGrid.newGame();
+        //Grid newGrid = new Grid();
+        //newGrid.newGame();
+        DemoArraySorting demo = new DemoArraySorting();
+        demo.getUnsortedArray();
+        demo.displaySortedArray();
     }
     
     //menu option displayPlayerOptions
