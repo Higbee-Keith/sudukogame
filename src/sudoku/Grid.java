@@ -33,17 +33,12 @@ public class Grid {
         //game(ROWS,COLS) //not needed at this time
         //create a valid puzzle solution
         //call method and pass new array and index = 0
+        arrayShuffle();
         solution = createSolution(new int[9][9], 0); 
         
     }
     
-    private int[][] createSolution(int[][] game, int index) { //requires 2d array and index to be passed into
-        //if (index > 80) 
-        //    return game; //return a successfully created game and exit method
-        
-        //int x = index / 9; //index should not go beyond 8
-        //int y = index / 9; //index should not go beyond 8
-        
+    private void arrayShuffle() {
         //create new Integer array
         Integer[] numbers = new Integer[] {1, 2, 3, 4, 5, 6, 7, 8, 9};
         
@@ -62,6 +57,14 @@ public class Grid {
             int indexOfNum = Arrays.asList(numbers).indexOf(num);
             System.out.println("Index " + indexOfNum + " contains: " + num); 
         }
+    }
+    
+    private int[][] createSolution(int[][] game, int index) { //requires 2d array and index to be passed into
+        //if (index > 80) 
+        //    return game; //return a successfully created game and exit method
+        
+        //int x = index / 9; //index should not go beyond 8
+        //int y = index / 9; //index should not go beyond 8
         
         //List<Integer> numbers = new ArrayList<Integer>(); //create a new List of integers
         //loop through numbers 1 - 9 and add them to the List
