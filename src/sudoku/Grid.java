@@ -46,9 +46,7 @@ public class Grid {
         tempGame = copySolution(solution);
         
         //call createGame
-        //game = createGame(tempGame, gameCells);
-        
-        
+        //game = createGame(tempGame, gameCells);  
     }
     
     private void arrayShuffle() {
@@ -185,6 +183,7 @@ public class Grid {
         return true; //testNumber does not exist in 3x3 block
         
     }
+    
     
     private int[][] createGame(int[][] game, List<Integer> gameCells) {
         int i = 0;

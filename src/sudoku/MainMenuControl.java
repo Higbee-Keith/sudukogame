@@ -8,7 +8,7 @@ package sudoku;
 public class MainMenuControl {
     
     //default constructor
-    public MainMenuControl () {
+    public MainMenuControl() {
         
     }
     
