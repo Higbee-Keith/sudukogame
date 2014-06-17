@@ -12,6 +12,12 @@ public class GamePreferencesControl {
         
     }
     
+    //menu option getGameBorder
+    public void displayGameBorder() {
+        GetGameBoard gameBoard = new GetGameBoard();
+        gameBoard.displayGameBorders();
+    }
+    
     //menu option displayGameDifficulty
     public void displayGameDifficulty() {
         System.out.println("This function has been called");

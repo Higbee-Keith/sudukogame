@@ -10,6 +10,7 @@ public class GamePreferencesView {
 
     //create an array of Strings for the help menu items
     private final static String[][] preferencesMenuItems = {
+        {"B", "Display game board"},
         {"D", "Game difficulty"},
         {"R", "Return to main menu"}
     };
@@ -36,6 +37,9 @@ public class GamePreferencesView {
             input = input.trim().toUpperCase();  //forces input to validate to uppercase
             
             switch (input) {
+                case "B":
+                    this.gamePreferencesControl.displayGameBorder();
+                    break;
                 case "D":
                     this.gamePreferencesControl.displayGameDifficulty();
                     break;

@@ -16,4 +16,9 @@ public class PlayerMenuControl {
         System.out.println("This function has been called");
     }
 
+    //menu option displayReturnToMainMenu
+    public void displayReturnToMainMenu() {
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.getInput();
+    }
 }

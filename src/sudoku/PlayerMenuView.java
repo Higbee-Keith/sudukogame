@@ -40,6 +40,9 @@ public class PlayerMenuView {
                 case "N":
                     this.playerMenuControl.setPlayerName();
                     break;
+                case "R":
+                    this.playerMenuControl.displayReturnToMainMenu();
+                    break;
                 default:
                     System.out.println("Please enter a valid command");                    
             } 
