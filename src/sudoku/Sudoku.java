@@ -1,4 +1,5 @@
 package sudoku;
+import java.util.Scanner; //Reads input from System.in
 
 /**
  *
@@ -6,7 +7,9 @@ package sudoku;
  */
 
 public class Sudoku {
-
+    
+    private static Scanner inFile = new Scanner(System.in);
+    
     String welcomeMessage =
               "\n\t***********************************************************************"
             + "\n\t* Welcome to the game of Sudoku!                                      *"       
@@ -15,23 +18,17 @@ public class Sudoku {
             + "\n\t* Good Luck!!!                                                        *"
             + "\n\t***********************************************************************"
             + "\n";
-    
+
     public Sudoku() {
         
     }
-    
+        
     public static void main(String[] args) {
         Sudoku sudoku = new Sudoku();
         sudoku.display();
         
         //Grid grid = new Grid();
         //grid.displaySize();
-        
-        //Game game = new Game();
-        //game.displayPlayer();
-        //game.displayHelp();
-        
-        //grid.percentCompletion();
         
         //HelpMenuView help = new HelpMenuView();
         //help.getInput();
@@ -41,8 +38,11 @@ public class Sudoku {
     }
     
     private void display() {
-        System.out.println(this.welcomeMessage);
-        
+        System.out.println(this.welcomeMessage);  
+    }
+    
+    public static Scanner getInputFile() {
+        return Sudoku.inFile;
     }
 
 /**
@@ -72,4 +72,6 @@ public class Sudoku {
         else {
             System.out.print(incorrectMessage);
             return false;
-        }}}
+        }
+    }
+}

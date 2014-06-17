@@ -17,7 +17,7 @@ public class Grid {
     private int[][] solution;
     private int[][] tempGame;
     private int[][] game;  //generate game array
-    private int[] difficulty = new int[68];
+    //private int[] difficulty = new int[68];
     /*public static final int[][] VALID_PUZZLE = {
         {2, 3, 1, 4, 6, 9, 8, 5, 7},
         {5, 6, 7, 3, 1, 8, 9, 4, 2},
@@ -49,7 +49,7 @@ public class Grid {
         //game = createGame(tempGame, gameCells);  
     }
     
-    private void arrayShuffle() {
+    /*private void arrayShuffle() {
         //create new Integer array
         Integer[] numbers = new Integer[] {1, 2, 3, 4, 5, 6, 7, 8, 9};
         
@@ -68,7 +68,7 @@ public class Grid {
             int indexOfNum = Arrays.asList(numbers).indexOf(num);
             System.out.println("Index " + indexOfNum + " contains: " + num); 
         }
-    }
+    }*/
     
     private int[][] createSolution(int[][] game, int index) { //requires 2d array and index to be passed into
         if (index > 80) {
@@ -174,7 +174,7 @@ public class Grid {
         
         while (y < blockY + 3) {
             while (x < blockX + 3) {
-                if (game[y][x] == testNumber) 
+                if (game[blockY][blockX] == testNumber) 
                     return false; //testNumber exists in 3x3 block
                 x++;
             }
@@ -183,7 +183,6 @@ public class Grid {
         return true; //testNumber does not exist in 3x3 block
         
     }
-    
     
     private int[][] createGame(int[][] game, List<Integer> gameCells) {
         int i = 0;

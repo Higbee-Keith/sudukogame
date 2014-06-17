@@ -6,23 +6,18 @@ import java.util.Scanner; //Reads input from System.in
  * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez, Daniel Allen
  */
 
-public class Game {
-    //Need to determine a solution to a game before starting a new game.
-    //No point in playing a game without a solution!
-    //Size of game to be pulled from Grid.java
-    
+public class Game {    
     //Declare a new player object
     Player player;
     
     public Game() {
         this.player = new Player();
         player.getName();
-        //player.calculatedTax();  REMOVE THIS LINE AND ASSOCIATED METHOD
     }
     
-    public void displayPlayer() {
-        System.out.println("\nHello, "  + this.player.name + ".");
-    }
+    //public void displayPlayer() {
+    //    System.out.println("\nHello, "  + this.player.name + ".");
+    //}
     
     public void displayHelp() {
         String help;
