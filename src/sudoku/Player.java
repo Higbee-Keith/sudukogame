@@ -1,5 +1,6 @@
 package sudoku;
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  *
@@ -46,8 +47,6 @@ public class Player implements Serializable {
     public void setTotalTime(double totaltime) {
         this.totaltime = totaltime;
     }
-    
-    
     
     public String getPlayerStatistics() {
         String playerStatistics = 
