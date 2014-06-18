@@ -1,5 +1,4 @@
 package sudoku;
-import java.util.Scanner; //Reads input from System.in
 import java.io.Serializable;
 
 /**
@@ -46,5 +45,15 @@ public class Player implements Serializable {
     
     public void setTotalTime(double totaltime) {
         this.totaltime = totaltime;
+    }
+    
+    
+    
+    public String getPlayerStatistics() {
+        String playerStatistics = 
+                this.getName() + " has solved " + this.getWins()
+                + " puzzles, " + "with a total time of "
+                + this.getTotalTime() + ".";
+        return playerStatistics;
     }
 }
