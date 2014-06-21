@@ -14,7 +14,6 @@ public class Sudoku {
               "\n\t***********************************************************************"
             + "\n\t* Welcome to the game of Sudoku!                                      *"       
             + "\n\t*                                                                     *"
-            + "\n\t*                                                                     *"
             + "\n\t* Good Luck!!!                                                        *"
             + "\n\t***********************************************************************"
             + "\n";
@@ -50,7 +49,7 @@ public class Sudoku {
  * Check 9 boxes for completion
  */
     
-    String correctMessage =
+    /*String correctMessage =
         "\n\t This section is correct."       
       + "\n";
     
@@ -73,5 +72,5 @@ public class Sudoku {
             System.out.print(incorrectMessage);
             return false;
         }
-    }
+    }*/
 }
