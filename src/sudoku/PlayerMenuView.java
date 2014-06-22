@@ -50,7 +50,7 @@ public class PlayerMenuView {
     }
 
     //displays the main menu
-    public void display() {
+    private void display() {
         System.out.println("\n**************************************************\n");
         //for loop to cycle through array of menu items
         System.out.println("\t\tPlayer Menu\n");

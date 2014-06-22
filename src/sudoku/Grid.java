@@ -1,4 +1,5 @@
 package sudoku;
+import java.io.Serializable;
 import java.util.*;
 
 /**
@@ -6,7 +7,7 @@ import java.util.*;
  * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez, Daniel Allen
  */
 
-public class Grid {
+public class Grid implements Serializable {
     //declare constants
     static final int TOTAL_CELLS = 81;
     static final int ROWS = 9;
@@ -22,6 +23,48 @@ public class Grid {
     //constructor    
     public Grid(){        
     }
+
+    public int[][] getSolution() {
+        return solution;
+    }
+
+    public void setSolution(int[][] solution) {
+        this.solution = solution;
+    }
+
+    public int[][] getTempGame() {
+        return tempGame;
+    }
+
+    public void setTempGame(int[][] tempGame) {
+        this.tempGame = tempGame;
+    }
+
+    public int[][] getGame() {
+        return game;
+    }
+
+    public void setGame(int[][] game) {
+        this.game = game;
+    }
+
+    public Solution getNewSolution() {
+        return newSolution;
+    }
+
+    public void setNewSolution(Solution newSolution) {
+        this.newSolution = newSolution;
+    }
+
+    public List<Integer> getGameCells() {
+        return gameCells;
+    }
+
+    public void setGameCells(List<Integer> gameCells) {
+        this.gameCells = gameCells;
+    }
+    
+    
     
     public void newGame() {
         //game(ROWS,COLS) //not needed at this time

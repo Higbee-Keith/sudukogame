@@ -10,7 +10,7 @@ public class Sudoku {
     
     private static Scanner inFile = new Scanner(System.in);
     
-    String welcomeMessage =
+    private String welcomeMessage =
               "\n\t***********************************************************************"
             + "\n\t* Welcome to the game of Sudoku!                                      *"       
             + "\n\t*                                                                     *"
