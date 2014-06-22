@@ -41,22 +41,22 @@ public class HelpMenuView {
             
             switch (input) {
                 case "B":
-                    this.helpMenuControl.displayBoardHelp();
+                    HelpMenuControl.displayBoardHelp();
                     break;
                 case "N":
-                    this.helpMenuControl.displayNumbersHelp();
+                    HelpMenuControl.displayNumbersHelp();
                     break;
                 case "P":
-                    this.helpMenuControl.displayPlayerHelp();
+                    HelpMenuControl.displayPlayerHelp();
                     break;
                 case "S":
-                    this.helpMenuControl.displayStatisticsHelp();
+                    HelpMenuControl.displayStatisticsHelp();
                     break;
                 case "E":
-                    this.helpMenuControl.displayEndGameHelp();
+                    HelpMenuControl.displayEndGameHelp();
                     break;
                 case "R":
-                    this.helpMenuControl.displayReturnToMainMenu();
+                    HelpMenuControl.displayReturnToMainMenu();
                     break;
                 default:
                     System.out.println("Please enter a valid command");
