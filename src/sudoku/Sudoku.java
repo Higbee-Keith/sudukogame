@@ -33,7 +33,7 @@ public class Sudoku {
         //help.getInput();
         
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.getInput();
+        mainMenu.executeCommands(null);
     }
     
     private void display() {

@@ -6,10 +6,14 @@ import java.util.Scanner;
  * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez, Daniel Allen
  */
 
-public class MainMenuView {
-
+public class MainMenuView extends Menu{
+    //constructor
+    public MainMenuView() {
+        super(MainMenuView.menuItems);
+    }
+    
     //create an array of Strings for the help menu items 
-   private final static String[][] mainMenuItems = {
+    private final static String[][] menuItems = {
         {"N", "New Game"},
         {"O", "Player Options"},
         {"P", "Preferences"},
@@ -20,24 +24,15 @@ public class MainMenuView {
     //create instance of MainMenuControl
     private MainMenuControl mainMenuControl = new MainMenuControl();
     
-    //default constructor
-    public MainMenuView() {
-        
-    }
-    
     //call the display method and get user input
-    public void getInput() {
-        String input;
-        Scanner getCommand = new Scanner(System.in);
-        
+    @Override
+    public String executeCommands(Object object) {
+        String status = Game.PLAYING;    
         do {
             this.display(); //displays the display method from this class
             
             //get the input command entered by user
-            System.out.println("\nPlease enter a valid command");
-            input = getCommand.nextLine();
-            input = input.trim().toUpperCase();  //forces input to validate to uppercase
-            
+            String input = this.getCommand();
             switch (input) {
                 case "N":
                     this.mainMenuControl.displayNewGame();
@@ -52,23 +47,9 @@ public class MainMenuView {
                     this.mainMenuControl.displayHelpMenu();
                     break;
                 case "Q":
-                    System.exit(0);
-                default:
-                    System.out.println("Please enter a valid command");
-                    continue;                    
+                    System.exit(0);                  
             } 
-        } while (!input.equals("Q"));
-        return;
-    }
-    
-    //displays the main menu
-    public void display() {
-        System.out.println("\n**************************************************\n");
-        //for loop to cycle through array of menu items
-        System.out.println("\t\tMain Menu\n");
-        for (int i = 0; i < MainMenuView.mainMenuItems.length; i++) {
-            System.out.println("\t " + mainMenuItems[i][0] + "\t" + mainMenuItems[i][1]);
-        }
-        System.out.println("\n**************************************************");
+        } while (!status.equals(Game.EXIT));
+        return Game.EXIT;
     }
 }

@@ -13,13 +13,11 @@ public class HelpMenuControl {
     }
     
     //menu option displayBoardHelp
-    //Josiah to code this
     public static void displayBoardHelp() {
         
     }
     
     //menu option displayNumbersHelp
-    //Daniel to code this
     public static void displayNumbersHelp() {
         System.out.println("\t\tNumbers Help");
         System.out.println("\n\tInsert the numbers 1-9 into every row, column, and box."
@@ -28,51 +26,36 @@ public class HelpMenuControl {
     }
     
     //menu option displayPlayerHelp
-    //Jessie to code this
     public static void displayPlayerHelp() {
-        displayHelpBorder();
         System.out.println("\t\tPlayer Help");
         System.out.println("\n\tThe player inserts numbers 1-9 in the empty "
                 + "locations. The game is finished once the player successfully "
                 + "fills in every location without repeating a number in any "
                 + "given column or row. \n");
-        displayHelpBorder();
-        
     }
     
     //menu option displayStatisticsHelp
-    //Keith to code this
     public static void displayStatisticsHelp() {
-        displayHelpBorder();
         System.out.println("\t\tStatistics Help");
         System.out.println("\n\tThe statistics show how many numbers are \n" +
                 "currently correct and how many numbers are currently \n" +
                 "incorrect.  They also calculate and show the percentage \n" +
                 "of correct numbers.\n");
-        displayHelpBorder();
     }
     
-    //menu option displayEndGameHelp    
-    //Jae to code this
+    //menu option displayEndGameHelp
     public static void displayEndGameHelp() {
-        displayHelpBorder();
         System.out.println("\t\tEnding the Game Help");
         System.out.println("\n\tThe game ends either when the player\n"
                 + "successfully completes the Sudoku puzzle correctly, or\n"
                 + "if the player gets stuck and chooses to give up.  If the \n"
                 + "player chooses to give up, the correct answers are shown, \n"
                 + "and a new game must be started");
-        displayHelpBorder();
     }
     
     //menu option displayReturnToMainMenu
     public static void displayReturnToMainMenu() {
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.getInput();
-    }
-    
-    public static void displayHelpBorder() {
-        System.out.println(
-                "------------------------------------------------------------");
+        mainMenu.executeCommands(null);
     }
 }

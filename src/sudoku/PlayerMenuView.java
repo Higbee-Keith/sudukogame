@@ -1,5 +1,4 @@
 package sudoku;
-
 import java.util.Scanner;
 
 /**
@@ -7,35 +6,30 @@ import java.util.Scanner;
  * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez, Daniel Allen
  */
 
-public class PlayerMenuView {
-    
-    // create an array of strings to act as player menu items
-    private final static String [][] playerMenuItems = {
-        {"N", "Enter Player's Name"},
-        {"R", "Return to Main Menu"}
-            
-            };
+public class PlayerMenuView extends Menu{
+    //constructor
+    public PlayerMenuView() {
+        super(PlayerMenuView.menuItems);
+    }
     
     // create instance of playermenucontrol
     private PlayerMenuControl playerMenuControl = new PlayerMenuControl();
     
-    // default constructor
-    public PlayerMenuView(){
-        
-    }
-    //call the display method and get user input
-    public void getInput() {
+    // create an array of strings to act as player menu items
+    private final static String [][] menuItems = {
+        {"N", "Enter Player's Name"},
+        {"R", "Return to Main Menu"}
+    };
+    
+//call the display method and get user input
+    @Override
+    public String executeCommands(Object object) {
         String input;
-        Scanner getCommand = new Scanner(System.in);
-        
         do {
             this.display(); //displays the display method from this class
             
             //get the input command entered by user
-            System.out.println("\nPlease enter a valid command");
-            input = getCommand.nextLine();
-            input = input.trim().toUpperCase();  //forces input to validate to uppercase
-            
+            input = this.getCommand();
             switch (input) {
                 case "N":
                     this.playerMenuControl.setPlayerName();
@@ -47,16 +41,6 @@ public class PlayerMenuView {
                     System.out.println("Please enter a valid command");                    
             } 
         } while (!input.equals("X"));
-    }
-
-    //displays the main menu
-    private void display() {
-        System.out.println("\n**************************************************\n");
-        //for loop to cycle through array of menu items
-        System.out.println("\t\tPlayer Menu\n");
-        for (int i = 0; i < PlayerMenuView.playerMenuItems.length; i++) {
-            System.out.println("\t " + playerMenuItems[i][0] + "\t" + playerMenuItems[i][1]);
-        }
-        System.out.println("\n**************************************************");
+        return input;
     }
 }

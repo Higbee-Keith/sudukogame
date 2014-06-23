@@ -19,6 +19,6 @@ public class PlayerMenuControl {
     //menu option displayReturnToMainMenu
     public void displayReturnToMainMenu() {
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.getInput();
+        mainMenu.executeCommands(null);
     }
 }

@@ -21,23 +21,18 @@ public class MainMenuControl {
     //menu option displayPlayerOptions
     public void displayPlayerOptions() {
         PlayerMenuView playerMenuView = new PlayerMenuView();
-        playerMenuView.getInput();
+        playerMenuView.executeCommands(null);
     }
     
     //menu option displayPreferences
     public void displayGamePreferences() {
         GamePreferencesView gamePreferencesView = new GamePreferencesView();
-        gamePreferencesView.getInput();
+        gamePreferencesView.executeCommands(null);
     }
     
     //menu option displayHelpMenu
     public void displayHelpMenu() {
         HelpMenuView helpMenuView = new HelpMenuView();
-        helpMenuView.getInput();
-    }
-    
-    public void displayHelpBorder() {
-        System.out.println(
-                "------------------------------------------------------------");
+        helpMenuView.executeCommands(null);
     }
 }
