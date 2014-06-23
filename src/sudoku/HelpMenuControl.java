@@ -14,13 +14,13 @@ public class HelpMenuControl {
     
     //menu option displayBoardHelp
     //Josiah to code this
-    public void displayBoardHelp() {
+    public static void displayBoardHelp() {
         
     }
     
     //menu option displayNumbersHelp
     //Daniel to code this
-    public void displayNumbersHelp() {
+    public static void displayNumbersHelp() {
         System.out.println("\t\tNumbers Help");
         System.out.println("\n\tInsert the numbers 1-9 into every row, column, and box."
                 + "\nEvery row, column and box can only use each number once. "
@@ -29,7 +29,7 @@ public class HelpMenuControl {
     
     //menu option displayPlayerHelp
     //Jessie to code this
-    public void displayPlayerHelp() {
+    public static void displayPlayerHelp() {
         displayHelpBorder();
         System.out.println("\t\tPlayer Help");
         System.out.println("\n\tThe player inserts numbers 1-9 in the empty "
@@ -42,7 +42,7 @@ public class HelpMenuControl {
     
     //menu option displayStatisticsHelp
     //Keith to code this
-    public void displayStatisticsHelp() {
+    public static void displayStatisticsHelp() {
         displayHelpBorder();
         System.out.println("\t\tStatistics Help");
         System.out.println("\n\tThe statistics show how many numbers are \n" +
@@ -54,7 +54,7 @@ public class HelpMenuControl {
     
     //menu option displayEndGameHelp    
     //Jae to code this
-    public void displayEndGameHelp() {
+    public static void displayEndGameHelp() {
         displayHelpBorder();
         System.out.println("\t\tEnding the Game Help");
         System.out.println("\n\tThe game ends either when the player\n"
@@ -66,12 +66,12 @@ public class HelpMenuControl {
     }
     
     //menu option displayReturnToMainMenu
-    public void displayReturnToMainMenu() {
+    public static void displayReturnToMainMenu() {
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.getInput();
     }
     
-    public void displayHelpBorder() {
+    public static void displayHelpBorder() {
         System.out.println(
                 "------------------------------------------------------------");
     }
