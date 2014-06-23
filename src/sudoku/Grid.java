@@ -9,8 +9,6 @@ import java.util.*;
 public class Grid {
     //declare constants
     static final int TOTAL_CELLS = 81;
-    static final int ROWS = 9;
-    static final int COLS = 9;
 
     //declare variables and arrays
     private int[][] solution;
