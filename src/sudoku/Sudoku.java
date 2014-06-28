@@ -19,18 +19,11 @@ public class Sudoku {
             + "\n";
 
     public Sudoku() {
-        
     }
         
     public static void main(String[] args) {
         Sudoku sudoku = new Sudoku();
         sudoku.display();
-        
-        //Grid grid = new Grid();
-        //grid.displaySize();
-        
-        //HelpMenuView help = new HelpMenuView();
-        //help.getInput();
         
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.executeCommands(null);
@@ -43,34 +36,4 @@ public class Sudoku {
     public static Scanner getInputFile() {
         return Sudoku.inFile;
     }
-
-/**
- * @author Allen-Daniel
- * Check 9 boxes for completion
- */
-    
-    /*String correctMessage =
-        "\n\t This section is correct."       
-      + "\n";
-    
-    String incorrectMessage =
-        "\n\t This section is incorrect."       
-      + "\n";
-       
-    private boolean blockcheck(byte a, byte b, byte c, byte d, byte e, byte f, byte g, byte h, byte i) {
-        int[] BlockArray = {a, b, c, d, e, f, g, h, i};
-        int sum = 0;
-        for (double s : BlockArray) {
-            sum += s;
-                            }
-    
-        if (sum == 45) {
-            System.out.print(correctMessage);
-            return true;
-        }
-        else {
-            System.out.print(incorrectMessage);
-            return false;
-        }
-    }*/
 }

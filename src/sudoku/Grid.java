@@ -46,14 +46,6 @@ public class Grid implements Serializable {
         this.game = game;
     }
 
-    public Solution getNewSolution() {
-        return newSolution;
-    }
-
-    public void setNewSolution(Solution newSolution) {
-        this.newSolution = newSolution;
-    }
-
     public List<Integer> getGameCells() {
         return gameCells;
     }
@@ -62,18 +54,30 @@ public class Grid implements Serializable {
         this.gameCells = gameCells;
     }
     
-    
-    
     public void newGame() {
         //game(ROWS,COLS) //not needed at this time
         //arrayShuffle();
         
-        //create a valid puzzle solution
+        //create a valid puzzle solution using setter method
         //call Solution class.createSolution method and pass new array and index = 0
-        solution = newSolution.createSolution(new int[9][9], 0);
+        setSolution(newSolution.createSolution(new int[9][9], 0));
         
         //call Solution class.copySolution method and pass valid solution
-        tempGame = newSolution.copySolution(solution);
+        //tempGame = newSolution.copySolution(solution);
+        //create a copy of the solution and assign to tempGame
+        setTempGame(getSolution());
+        
+        /* --displays the tempGame (copy of solution)
+        FOR DEBUGGING PURPOSES ONLY
+        //print the copied solution to the screen
+        for (int j = 0; j < tempGame.length; j++) {
+                for (int k = 0; k < tempGame[j].length; k++) {
+                    System.out.print(tempGame[j][k] + " ");
+                }
+                System.out.println();
+            }
+        System.out.println();
+        */
         
         //call createGame
         //game = createGame(tempGame, gameCells);  

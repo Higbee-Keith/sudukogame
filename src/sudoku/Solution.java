@@ -16,6 +16,8 @@ public class Solution {
     
     public int[][] createSolution(int[][] game, int index) { //requires 2d array and index to be passed into
         if (index > 80) {
+            /*FOR DEBUGGING PURPOSES ONLY
+            //displays the solution
             for (int j = 0; j < game.length; j++) {
                 for (int k = 0; k < game[j].length; k++) {
                     System.out.print(game[j][k] + " ");
@@ -23,6 +25,7 @@ public class Solution {
                 System.out.println();
             }
             System.out.println();
+            */
             return game; //return a successfully created game and exit method
         }
         
@@ -128,7 +131,7 @@ public class Solution {
         
     }
     
-    public int[][] copySolution(int[][] game) {
+    /*public int[][] copySolution(int[][] game) {
         int y = 0;
         int[][] validGame = new int[9][9];
         while ( y < 9 ) {
@@ -150,6 +153,6 @@ public class Solution {
         System.out.println();
             
         return validGame;
-    }
+    }*/
     
 }

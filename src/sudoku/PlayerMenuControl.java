@@ -13,7 +13,8 @@ public class PlayerMenuControl {
     
     //set and display as needed the player name.  currently unfinished/empty
     public void setPlayerName() {
-        System.out.println("This function has been called");
+        PlayerNameView playerName = new PlayerNameView();
+        playerName.getName();
     }
 
     //menu option displayReturnToMainMenu

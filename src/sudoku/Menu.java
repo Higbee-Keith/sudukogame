@@ -53,8 +53,6 @@ public abstract class Menu {
     
     //check for valid input
     private boolean validCommand(String input) {
-        //String[][] items = this.menuItems;
-        
         //loop through array of menuItems
         for (String[] item : this.menuItems) {
             if (item[0].equals(input)) {
@@ -75,6 +73,7 @@ public abstract class Menu {
             input = getCommand.nextLine();
             input = input.trim().toUpperCase();  //forces input to validate to uppercase
             
+            //check if input is valid
             isValid = validCommand(input);
             if (!validCommand(input)) {
                 System.out.println("Invalid command. Please input a valid command.");
