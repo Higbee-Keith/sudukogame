@@ -5,7 +5,7 @@ package sudoku;
  * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez, Daniel Allen
  */
 
-public class GamePreferencesControl {
+public class GamePreferencesControl extends SuperControl {
     
     //default constructor
     public GamePreferencesControl () {
@@ -23,11 +23,6 @@ public class GamePreferencesControl {
         System.out.println("This function has been called");
     }
     
-    //menu option displayReturnToMainMenu
-    public void displayReturnToMainMenu() {
-        MainMenuView mainMenu = new MainMenuView();
-        mainMenu.executeCommands(null);
-    }
     
 
 }
