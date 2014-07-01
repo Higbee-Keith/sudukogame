@@ -36,22 +36,22 @@ public class HelpMenuView extends Menu{
             input = this.getCommand();
             switch (input) {
                 case "B":
-                    HelpMenuControl.displayBoardHelp();
+                    this.helpMenuControl.displayBoardHelp();
                     break;
                 case "N":
-                    HelpMenuControl.displayNumbersHelp();
+                    this.helpMenuControl.displayNumbersHelp();
                     break;
                 case "P":
-                    HelpMenuControl.displayPlayerHelp();
+                    this.helpMenuControl.displayPlayerHelp();
                     break;
                 case "S":
-                    HelpMenuControl.displayStatisticsHelp();
+                    this.helpMenuControl.displayStatisticsHelp();
                     break;
                 case "E":
-                    HelpMenuControl.displayEndGameHelp();
+                    this.helpMenuControl.displayEndGameHelp();
                     break;
                 case "R":
-                    HelpMenuControl.displayReturnToMainMenu();
+                    this.helpMenuControl.displayReturnToMainMenu();
                     break;
             } 
         } while (!input.equals("R"));

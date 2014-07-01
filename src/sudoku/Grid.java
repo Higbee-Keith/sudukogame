@@ -1,5 +1,6 @@
 package sudoku;
 import java.io.Serializable;
+import static java.lang.Math.random;
 import java.util.*;
 
 /**
@@ -54,21 +55,17 @@ public class Grid implements Serializable {
         this.gameCells = gameCells;
     }
     
-    public void newGame() {
-        //game(ROWS,COLS) //not needed at this time
-        //arrayShuffle();
-        
+    public void newGame() {        
         //create a valid puzzle solution using setter method
         //call Solution class.createSolution method and pass new array and index = 0
         setSolution(newSolution.createSolution(new int[9][9], 0));
         
-        //call Solution class.copySolution method and pass valid solution
         //tempGame = newSolution.copySolution(solution);
         //create a copy of the solution and assign to tempGame
         setTempGame(getSolution());
         
-        /* --displays the tempGame (copy of solution)
-        FOR DEBUGGING PURPOSES ONLY
+        //displays the tempGame (copy of solution)
+        //FOR DEBUGGING PURPOSES ONLY
         //print the copied solution to the screen
         for (int j = 0; j < tempGame.length; j++) {
                 for (int k = 0; k < tempGame[j].length; k++) {
@@ -77,35 +74,47 @@ public class Grid implements Serializable {
                 System.out.println();
             }
         System.out.println();
-        */
+        //*/
         
-        //call createGame
-        //game = createGame(tempGame, gameCells);  
+        //get difficulty - not currently working
+        GameDifficultyControl gameDifficulty = new GameDifficultyControl();
+        //int d = gameDifficulty.getDifficultyLevel();
+        
+        //temporary difficultyLevel
+        int d = 36;
+        
+        //game = createGame(tempGame, gameCells); 
+        game = createGame(tempGame, d);
+        setGame(game);
     }
     
-    //createGame method not yet fully functional
-    private int[][] createGame(int[][] game, List<Integer> gameCells) {
-        int i = 0;
-        /*while (gameCells.size() > 0) {
-            int gamePosition = gameCells.remove(0);
-            int x = gamePosition % 9;
-            int y = gamePosition / 9;
-            int tempGame = game[y][x];
-            game[y][x] = 0;
-            
-            if (!)
-        }*/
-        
-        gameCells = new ArrayList<Integer>();
-        while (i < TOTAL_CELLS) {
-            gameCells.add(i);
-            i++;
+    //createGame method -- new
+    private int[][] createGame(int[][] tmpGame, int difficulty) {
+        Random rand = new Random();
+        for(int i = 0; i < difficulty; i++){   
+            int iRand = rand.nextInt(9);
+            int jRand = rand.nextInt(9);
+            if (tmpGame[iRand][jRand] == 0)
+                continue;
+            else
+                tmpGame[iRand][jRand] = 0;
         }
-        Collections.shuffle(gameCells);
-        return createGame(game, gameCells);
         
-        //return game;
+        //displays the tmpGame (tempGame with zeroes)
+        //FOR DEBUGGING PURPOSES ONLY
+        //print the game to the screen
+        System.out.println("This is a copy of the solution with zeroes "
+                + "replacing random elements");
+        for (int j = 0; j < tmpGame.length; j++) {
+                for (int k = 0; k < tmpGame[j].length; k++) {
+                    System.out.print(tmpGame[j][k] + " ");
+                }
+                System.out.println();
+            }
+        System.out.println();
+        return game;
     }
+
     
     /*private void arrayShuffle() {
         //create new Integer array
@@ -144,16 +153,7 @@ public class Grid implements Serializable {
         }
     }*/
     
-    /*private int getInitialGridNumbers() {
-        //Declare a new Scanner input
-        Scanner input = new Scanner(System.in);
-        
-        //Get number from user and return the value
-        System.out.println("How many numbers would you like to start with?");
-        return givenNumbers = input.nextInt();              
-    }
-    
-    public void displaySize() {
+    /*public void displaySize() {
         getInitialGridNumbers();
         System.out.println("Your game will start with " + givenNumbers + 
                 " numbers already completed for you.");

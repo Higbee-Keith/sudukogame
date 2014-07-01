@@ -36,7 +36,7 @@ public class GamePreferencesView extends Menu{
                     this.gamePreferencesControl.displayGameBorder();
                     break;
                 case "D":
-                    this.gamePreferencesControl.displayGameDifficulty();
+                    this.gamePreferencesControl.setGameDifficulty();
                     break;
                 case "R":
                     this.gamePreferencesControl.displayReturnToMainMenu();

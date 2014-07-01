@@ -19,8 +19,9 @@ public class GamePreferencesControl {
     }
     
     //menu option displayGameDifficulty
-    public void displayGameDifficulty() {
-        System.out.println("This function has been called");
+    public void setGameDifficulty() {
+        GameDifficultyView gameDifficulty = new GameDifficultyView();
+        gameDifficulty.executeCommands(null);
     }
     
     //menu option displayReturnToMainMenu
