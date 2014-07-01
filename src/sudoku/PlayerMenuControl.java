@@ -5,7 +5,7 @@ package sudoku;
  * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez, Daniel Allen
  */
 
-public class PlayerMenuControl {
+public class PlayerMenuControl extends SuperControl {
     
     // default contructor
     public PlayerMenuControl() {
@@ -17,9 +17,4 @@ public class PlayerMenuControl {
         playerName.getName();
     }
 
-    //menu option displayReturnToMainMenu
-    public void displayReturnToMainMenu() {
-        MainMenuView mainMenu = new MainMenuView();
-        mainMenu.executeCommands(null);
-    }
 }

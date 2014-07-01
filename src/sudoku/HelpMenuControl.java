@@ -5,7 +5,7 @@ package sudoku;
  * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez, Daniel Allen
  */
 
-public class HelpMenuControl {
+public class HelpMenuControl extends SuperControl {
     
     //default constructor
     public HelpMenuControl () {
@@ -58,9 +58,4 @@ public class HelpMenuControl {
                 + "\nand a new game must be started. \n");
     }
     
-    //menu option displayReturnToMainMenu
-    public static void displayReturnToMainMenu() {
-        MainMenuView mainMenu = new MainMenuView();
-        mainMenu.executeCommands(null);
-    }
 }
