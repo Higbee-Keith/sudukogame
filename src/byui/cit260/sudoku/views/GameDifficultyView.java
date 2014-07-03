@@ -1,6 +1,6 @@
 package byui.cit260.sudoku.views;
-import sudoku.GameDifficultyControl;
-import sudoku.Menu;
+import byui.cit260.sudoku.uncategorized.GameDifficultyControl;
+import byui.cit260.sudoku.uncategorized.Menu;
 import byui.cit260.sudoku.interfaces.EnterInfo;
 
 /**

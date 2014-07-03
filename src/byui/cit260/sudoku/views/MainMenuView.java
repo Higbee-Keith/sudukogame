@@ -1,8 +1,8 @@
 package byui.cit260.sudoku.views;
 import java.util.Scanner;
-import sudoku.Game;
-import sudoku.MainMenuControl;
-import sudoku.Menu;
+import byui.cit260.sudoku.uncategorized.Game;
+import byui.cit260.sudoku.uncategorized.MainMenuControl;
+import byui.cit260.sudoku.uncategorized.Menu;
 import byui.cit260.sudoku.interfaces.EnterInfo;
 
 /**

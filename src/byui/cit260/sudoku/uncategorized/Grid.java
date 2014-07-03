@@ -1,4 +1,4 @@
-package sudoku;
+package byui.cit260.sudoku.uncategorized;
 import java.io.Serializable;
 import static java.lang.Math.random;
 import java.util.*;

@@ -1,7 +1,7 @@
 package byui.cit260.sudoku.views;
 
 import java.util.Scanner;
-import sudoku.Sudoku;
+import byui.cit260.sudoku.uncategorized.Sudoku;
 
 /**
  *

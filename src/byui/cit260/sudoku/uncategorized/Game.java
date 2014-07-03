@@ -1,4 +1,4 @@
-package sudoku;
+package byui.cit260.sudoku.uncategorized;
 import java.util.Scanner; //Reads input from System.in
 
 /**
