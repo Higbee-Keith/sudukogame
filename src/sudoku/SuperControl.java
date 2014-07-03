@@ -8,14 +8,17 @@
 
 package sudoku;
 
+import byui.cit260.sudoku.views.MainMenuView;
+
 /**
  *
- * @author PAINTBrAwLL
+ * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez, Daniel Allen
  */
+
 public class SuperControl {
     //menu option displayReturnToMainMenu
     public static void displayReturnToMainMenu() {
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.executeCommands(null);
+        mainMenu.getInput(null);
     }
 }

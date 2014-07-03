@@ -1,18 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package sudoku;
-
-import java.util.Scanner;
 
 /**
  *
- * @author Keith
+ * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez, Daniel Allen
  */
-public abstract class Menu {
+
+import java.util.Scanner;
+
+public class Menu {
     private String[][] menuItems = null;
     
 //default constructor
@@ -23,9 +18,6 @@ public abstract class Menu {
         this();
         this.menuItems = menuItems;
     }
-
-    //abstract function--all sub-classes implement this function
-    public abstract String executeCommands(Object object);
         
     public String[][] getMenuItems() {
         return menuItems;

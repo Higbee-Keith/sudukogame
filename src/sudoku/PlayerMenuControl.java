@@ -1,5 +1,7 @@
 package sudoku;
 
+import byui.cit260.sudoku.views.PlayerNameView;
+
 /**
  *
  * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez, Daniel Allen

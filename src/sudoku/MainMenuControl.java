@@ -1,5 +1,9 @@
 package sudoku;
 
+import byui.cit260.sudoku.views.GamePreferencesView;
+import byui.cit260.sudoku.views.PlayerMenuView;
+import byui.cit260.sudoku.views.HelpMenuView;
+
 /**
  *
  * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez, Daniel Allen
@@ -21,18 +25,18 @@ public class MainMenuControl {
     //menu option displayPlayerOptions
     public void displayPlayerOptions() {
         PlayerMenuView playerMenuView = new PlayerMenuView();
-        playerMenuView.executeCommands(null);
+        playerMenuView.getInput(null);
     }
     
     //menu option displayPreferences
     public void displayGamePreferences() {
         GamePreferencesView gamePreferencesView = new GamePreferencesView();
-        gamePreferencesView.executeCommands(null);
+        gamePreferencesView.getInput(null);
     }
     
     //menu option displayHelpMenu
     public void displayHelpMenu() {
         HelpMenuView helpMenuView = new HelpMenuView();
-        helpMenuView.executeCommands(null);
+        helpMenuView.getInput(null);
     }
 }

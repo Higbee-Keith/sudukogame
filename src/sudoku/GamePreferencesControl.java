@@ -1,5 +1,7 @@
 package sudoku;
 
+import byui.cit260.sudoku.views.GameDifficultyView;
+
 /**
  *
  * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez, Daniel Allen
@@ -21,7 +23,7 @@ public class GamePreferencesControl extends SuperControl {
     //menu option displayGameDifficulty
     public void setGameDifficulty() {
         GameDifficultyView gameDifficulty = new GameDifficultyView();
-        gameDifficulty.executeCommands(null);
+        gameDifficulty.getInput(null);
     }
     
     

@@ -1,5 +1,6 @@
 package sudoku;
 
+import byui.cit260.sudoku.views.GamePreferencesView;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -49,6 +50,6 @@ public class GameDifficultyControl {
     //menu option displayReturnToGamePreferencesMenu
     public void displayReturnToGamePreferencesMenu() {
         GamePreferencesView gamePreferencesView = new GamePreferencesView();
-        gamePreferencesView.executeCommands(null);
+        gamePreferencesView.getInput(null);
     }
 }

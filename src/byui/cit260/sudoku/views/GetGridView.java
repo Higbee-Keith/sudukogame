@@ -1,4 +1,4 @@
-package sudoku;
+package byui.cit260.sudoku.views;
 import java.awt.Point;
 import java.util.Scanner;
 

@@ -1,4 +1,5 @@
 package sudoku;
+import byui.cit260.sudoku.views.MainMenuView;
 import java.util.Scanner; //Reads input from System.in
 
 /**
@@ -26,7 +27,7 @@ public class Sudoku {
         sudoku.display();
         
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.executeCommands(null);
+        mainMenu.getInput(null);
     }
     
     private void display() {

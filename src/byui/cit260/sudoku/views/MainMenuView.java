@@ -1,12 +1,16 @@
-package sudoku;
+package byui.cit260.sudoku.views;
 import java.util.Scanner;
+import sudoku.Game;
+import sudoku.MainMenuControl;
+import sudoku.Menu;
+import byui.cit260.sudoku.interfaces.EnterInfo;
 
 /**
  *
  * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez, Daniel Allen
  */
 
-public class MainMenuView extends Menu{
+public class MainMenuView extends Menu implements EnterInfo {
     //constructor
     public MainMenuView() {
         super(MainMenuView.menuItems);
@@ -26,7 +30,7 @@ public class MainMenuView extends Menu{
     
     //call the display method and get user input
     @Override
-    public String executeCommands(Object object) {
+    public String getInput(Object object) {
         String status = Game.PLAYING;    
         do {
             this.display(); //displays the display method from this class
