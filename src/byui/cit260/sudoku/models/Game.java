@@ -1,4 +1,4 @@
-package byui.cit260.sudoku.uncategorized;
+package byui.cit260.sudoku.models;
 import java.util.Scanner; //Reads input from System.in
 
 /**

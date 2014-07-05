@@ -1,7 +1,7 @@
 package byui.cit260.sudoku.views;
 
 import java.util.Scanner;
-import byui.cit260.sudoku.uncategorized.Sudoku;
+import byui.cit260.sudoku.models.Sudoku;
 
 /**
  *

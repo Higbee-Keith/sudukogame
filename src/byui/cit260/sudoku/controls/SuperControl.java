@@ -6,7 +6,7 @@
  * super class.
  */
 
-package byui.cit260.sudoku.uncategorized;
+package byui.cit260.sudoku.controls;
 
 import byui.cit260.sudoku.views.MainMenuView;
 

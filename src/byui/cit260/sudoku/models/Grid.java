@@ -1,4 +1,5 @@
-package byui.cit260.sudoku.uncategorized;
+package byui.cit260.sudoku.models;
+import byui.cit260.sudoku.controls.GameDifficultyControl;
 import java.io.Serializable;
 import static java.lang.Math.random;
 import java.util.*;

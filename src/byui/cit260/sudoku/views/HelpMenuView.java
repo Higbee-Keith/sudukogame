@@ -1,7 +1,7 @@
 package byui.cit260.sudoku.views;
 import java.util.Scanner;
-import byui.cit260.sudoku.uncategorized.HelpMenuControl;
-import byui.cit260.sudoku.uncategorized.Menu;import byui.cit260.sudoku.interfaces.EnterInfo;
+import byui.cit260.sudoku.controls.HelpMenuControl;
+import byui.cit260.sudoku.models.Menu;import byui.cit260.sudoku.interfaces.EnterInfo;
 
 
 /**

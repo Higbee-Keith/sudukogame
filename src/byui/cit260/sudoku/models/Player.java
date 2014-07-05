@@ -1,4 +1,4 @@
-package byui.cit260.sudoku.uncategorized;
+package byui.cit260.sudoku.models;
 import java.io.Serializable;
 import java.util.Objects;
 
