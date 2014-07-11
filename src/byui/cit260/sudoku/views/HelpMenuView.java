@@ -1,8 +1,8 @@
 package byui.cit260.sudoku.views;
 import java.util.Scanner;
 import byui.cit260.sudoku.controls.HelpMenuControl;
-import byui.cit260.sudoku.models.Menu;import byui.cit260.sudoku.interfaces.EnterInfo;
-
+import byui.cit260.sudoku.models.Menu;
+import byui.cit260.sudoku.interfaces.EnterInfo;
 
 /**
  *
@@ -30,7 +30,7 @@ public class HelpMenuView extends Menu implements EnterInfo {
     
     //call the display method and get user input
     @Override
-    public String getInput(Object object) {
+    public String getInput(Object object) { //was called getCommand before implementing interfaces
         String input;
         do {
             this.display(); //displays the display method from this class
