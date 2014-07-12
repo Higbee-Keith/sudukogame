@@ -1,8 +1,10 @@
 package byui.cit260.sudoku.views;
-import java.util.Scanner;
+
 import byui.cit260.sudoku.controls.HelpMenuControl;
-import byui.cit260.sudoku.models.Menu;
+import byui.cit260.sudoku.enums.StatusType;
+import byui.cit260.sudoku.exceptions.MenuException;
 import byui.cit260.sudoku.interfaces.EnterInfo;
+import byui.cit260.sudoku.models.Menu;
 
 /**
  *
@@ -30,34 +32,40 @@ public class HelpMenuView extends Menu implements EnterInfo {
     
     //call the display method and get user input
     @Override
-    public String getInput(Object object) { //was called getCommand before implementing interfaces
-        String input;
+    public StatusType getInput(Object object) { //was called getCommand before implementing interfaces
+        StatusType status = StatusType.PLAYING;
         do {
-            this.display(); //displays the display method from this class
-            
-            //get the input command entered by user
-            input = this.getCommand();
-            switch (input) {
-                case "B":
-                    this.helpMenuControl.displayBoardHelp();
-                    break;
-                case "N":
-                    this.helpMenuControl.displayNumbersHelp();
-                    break;
-                case "P":
-                    this.helpMenuControl.displayPlayerHelp();
-                    break;
-                case "S":
-                    this.helpMenuControl.displayStatisticsHelp();
-                    break;
-                case "E":
-                    this.helpMenuControl.displayEndGameHelp();
-                    break;
-                case "R":
-                    this.helpMenuControl.displayReturnToMainMenu();
-                    break;
+            try {
+                this.display(); //displays the display method from this class
+
+                //get the input command entered by user
+                String input = this.getCommand();
+                switch (input) {
+                    case "B":
+                        this.helpMenuControl.displayBoardHelp();
+                        break;
+                    case "N":
+                        this.helpMenuControl.displayNumbersHelp();
+                        break;
+                    case "P":
+                        this.helpMenuControl.displayPlayerHelp();
+                        break;
+                    case "S":
+                        this.helpMenuControl.displayStatisticsHelp();
+                        break;
+                    case "E":
+                        this.helpMenuControl.displayEndGameHelp();
+                        break;
+                    case "R":
+                        return StatusType.RETURN;
+                }    
+            }
+            catch (MenuException ex) {
+                //Prints out proper error message from Menu class...
+                //error text is in Error enum class
+                System.out.println("\n" + ex.getMessage());
             } 
-        } while (!input.equals("R"));
-        return input;
+        } while (status != StatusType.RETURN);
+        return status;
     }
 }

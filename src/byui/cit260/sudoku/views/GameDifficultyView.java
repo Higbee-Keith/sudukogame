@@ -1,5 +1,7 @@
 package byui.cit260.sudoku.views;
 import byui.cit260.sudoku.controls.GameDifficultyControl;
+import byui.cit260.sudoku.enums.StatusType;
+import byui.cit260.sudoku.exceptions.MenuException;
 import byui.cit260.sudoku.models.Menu;
 import byui.cit260.sudoku.interfaces.EnterInfo;
 
@@ -28,31 +30,37 @@ public class GameDifficultyView extends Menu implements EnterInfo {
     
     //call the display method and get user input
     @Override
-    public String getInput(Object object) {
-        String input;
+    public StatusType getInput(Object object) {
+        StatusType status = StatusType.PLAYING;
         do {
-            this.display(); //displays the display method from this class
-            
-            //get the input command entered by user
-            input = this.getCommand();
-            switch (input) {
-                case "E":
-                    this.gameDifficultyControl.getGameDifficulty(input);
-                    break;
-                case "M":
-                    this.gameDifficultyControl.getGameDifficulty(input);
-                    break;
-                case "H":
-                    this.gameDifficultyControl.getGameDifficulty(input);
-                    break;
-                case "S":
-                    this.gameDifficultyControl.getGameDifficulty(input);
-                    break;
-                case "R":
-                    this.gameDifficultyControl.displayReturnToGamePreferencesMenu();
-                    break;
+            try {
+                this.display(); //displays the display method from this class
+
+                //get the input command entered by user
+                String input = this.getCommand();
+                switch (input) {
+                    case "E":
+                        this.gameDifficultyControl.getGameDifficulty(input);
+                        break;
+                    case "M":
+                        this.gameDifficultyControl.getGameDifficulty(input);
+                        break;
+                    case "H":
+                        this.gameDifficultyControl.getGameDifficulty(input);
+                        break;
+                    case "S":
+                        this.gameDifficultyControl.getGameDifficulty(input);
+                        break;
+                    case "R":
+                        return StatusType.RETURN;
+                }
+            }
+            catch (MenuException ex) {
+                //Prints out proper error message from Menu class...
+                //error text is in Error enum class
+                System.out.println("\n" + ex.getMessage());
             } 
-        } while (!input.equals("R"));
-        return input;
+        } while (status != StatusType.RETURN);
+        return status;
     }
 }

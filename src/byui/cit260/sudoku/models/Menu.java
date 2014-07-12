@@ -1,6 +1,6 @@
 package byui.cit260.sudoku.models;
 
-import byui.cit260.sudoku.enums.Error;
+import byui.cit260.sudoku.enums.ErrorType;
 import byui.cit260.sudoku.exceptions.MenuException;
 
 /**
@@ -71,7 +71,7 @@ public class Menu {
             //check if input is valid
             isValid = validCommand(input);
             if (!validCommand(input)) {
-                throw new MenuException(Error.ERROR101.getError());
+                throw new MenuException(ErrorType.ERROR101.getError());
             }
         } while (!isValid);
         return input;

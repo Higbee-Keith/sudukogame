@@ -1,9 +1,12 @@
 package byui.cit260.sudoku.views;
-import java.util.Scanner;
-import byui.cit260.sudoku.models.Game;
+
 import byui.cit260.sudoku.controls.MainMenuControl;
-import byui.cit260.sudoku.models.Menu;
+import byui.cit260.sudoku.enums.StatusType;
+import byui.cit260.sudoku.exceptions.MenuException;
 import byui.cit260.sudoku.interfaces.EnterInfo;
+import byui.cit260.sudoku.models.Game;
+import byui.cit260.sudoku.models.Menu;
+import java.util.Scanner;
 
 /**
  *
@@ -22,7 +25,7 @@ public class MainMenuView extends Menu implements EnterInfo {
         {"O", "Player Options"},
         {"P", "Preferences"},
         {"H", "Help"},
-        {"Q", "QUIT"}
+        {"X", "Exit Game"}
     };
     
     //create instance of MainMenuControl
@@ -30,30 +33,37 @@ public class MainMenuView extends Menu implements EnterInfo {
     
     //call the display method and get user input
     @Override
-    public String getInput(Object object) {
-        String status = Game.PLAYING;    
+    public StatusType getInput(Object object) {
+        StatusType status = StatusType.PLAYING;    
         do {
-            this.display(); //displays the display method from this class
+            try {
+                this.display(); //displays the display method from this class
             
-            //get the input command entered by user
-            String input = this.getCommand();
-            switch (input) {
-                case "N":
-                    this.mainMenuControl.displayNewGame();
-                    break;
-                case "O":
-                    this.mainMenuControl.displayPlayerOptions();
-                    break;
-                case "P":
-                    this.mainMenuControl.displayGamePreferences();
-                    break;
-                case "H":
-                    this.mainMenuControl.displayHelpMenu();
-                    break;
-                case "Q":
-                    System.exit(0);                  
+                //get the input command entered by user
+                String input = this.getCommand();
+                switch (input) {
+                    case "N":
+                        this.mainMenuControl.displayNewGame();
+                        break;
+                    case "O":
+                        this.mainMenuControl.displayPlayerOptions();
+                        break;
+                    case "P":
+                        this.mainMenuControl.displayGamePreferences();
+                        break;
+                    case "H":
+                        this.mainMenuControl.displayHelpMenu();
+                        break;
+                    case "X":
+                        return StatusType.EXIT; 
+                }
+            }
+            catch (MenuException ex) {
+                //Prints out proper error message from Menu class...
+                //error text is in Error enum class
+                System.out.println("\n" + ex.getMessage());
             } 
-        } while (!status.equals(Game.EXIT));
-        return Game.EXIT;
+        } while (!status.equals("EXIT"));
+        return StatusType.EXIT;
     }
 }

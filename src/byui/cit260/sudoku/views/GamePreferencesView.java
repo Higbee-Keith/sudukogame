@@ -1,6 +1,8 @@
 package byui.cit260.sudoku.views;
 import java.util.Scanner;
 import byui.cit260.sudoku.controls.GamePreferencesControl;
+import byui.cit260.sudoku.enums.StatusType;
+import byui.cit260.sudoku.exceptions.MenuException;
 import byui.cit260.sudoku.models.Menu;
 import byui.cit260.sudoku.interfaces.EnterInfo;
 
@@ -27,28 +29,31 @@ public class GamePreferencesView extends Menu implements EnterInfo {
     
     //call the display method and get user input
     @Override
-    public String getInput(Object object) {
-        String input;
+    public StatusType getInput(Object object) {
+        StatusType status = StatusType.PLAYING;
         do {
-            this.display(); //displays the display method from this class
-            
-            //get the input command entered by user
-            input = this.getCommand();
-            switch (input) {
-                case "B":
-                    this.gamePreferencesControl.displayGameBorder();
-                    break;
-                case "D":
-                    this.gamePreferencesControl.setGameDifficulty();
-                    break;
-                case "R":
-                    this.gamePreferencesControl.displayReturnToMainMenu();
-                    break;
-                default:
-                    System.out.println("Please enter a valid command");
-                    continue;                    
+            try {
+                this.display(); //displays the display method from this class
+
+                //get the input command entered by user
+                String input = this.getCommand();
+                switch (input) {
+                    case "B":
+                        this.gamePreferencesControl.displayGameBorder();
+                        break;
+                    case "D":
+                        this.gamePreferencesControl.setGameDifficulty();
+                        break;
+                    case "R":
+                        return StatusType.RETURN;
+                }
+            }
+            catch (MenuException ex) {
+                //Prints out proper error message from Menu class...
+                //error text is in Error enum class
+                System.out.println("\n" + ex.getMessage());
             } 
-        } while (!input.equals("R"));
-        return input;
+        } while (status != StatusType.RETURN);
+        return status;
     }
 }

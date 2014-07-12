@@ -2,6 +2,8 @@ package byui.cit260.sudoku.views;
 import java.util.Scanner;
 import byui.cit260.sudoku.models.Menu;
 import byui.cit260.sudoku.controls.PlayerMenuControl;
+import byui.cit260.sudoku.enums.StatusType;
+import byui.cit260.sudoku.exceptions.MenuException;
 import byui.cit260.sudoku.interfaces.EnterInfo;
 
 /**
@@ -26,24 +28,28 @@ public class PlayerMenuView extends Menu implements EnterInfo {
     
     //call the display method and get user input
     @Override
-    public String getInput(Object object) {
-        String input;
+    public StatusType getInput(Object object) {
+        StatusType status = StatusType.PLAYING;
         do {
-            this.display(); //displays the display method from this class
-            
-            //get the input command entered by user
-            input = this.getCommand();
-            switch (input) {
-                case "N":
-                    this.playerMenuControl.setPlayerName();
-                    break;
-                case "R":
-                    this.playerMenuControl.displayReturnToMainMenu();
-                    break;
-                default:
-                    System.out.println("Please enter a valid command");                    
-            } 
-        } while (!input.equals("X"));
-        return input;
+            try {
+                this.display(); //displays the display method from this class
+
+                //get the input command entered by user
+                String input = this.getCommand();
+                switch (input) {
+                    case "N":
+                        this.playerMenuControl.setPlayerName();
+                        break;
+                    case "R":
+                        return StatusType.RETURN;
+                }
+            }
+            catch (MenuException ex) {
+                //Prints out proper error message from Menu class...
+                //error text is in Error enum class
+                System.out.println("\n" + ex.getMessage());
+            }
+        } while (status != StatusType.RETURN);
+        return status;
     }
 }
