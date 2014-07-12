@@ -1,5 +1,8 @@
 package byui.cit260.sudoku.models;
 
+import byui.cit260.sudoku.enums.Error;
+import byui.cit260.sudoku.exceptions.MenuException;
+
 /**
  *
  * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez, Daniel Allen
@@ -55,7 +58,7 @@ public class Menu {
     }
     
     //get input command
-    protected final String getCommand() {
+    protected final String getCommand() throws MenuException {
         String input;
         Scanner getCommand = new Scanner(System.in);
         boolean isValid = false;
@@ -68,8 +71,7 @@ public class Menu {
             //check if input is valid
             isValid = validCommand(input);
             if (!validCommand(input)) {
-                System.out.println("Invalid command. Please input a valid command.");
-                continue;
+                throw new MenuException(Error.ERROR101.getError());
             }
         } while (!isValid);
         return input;
