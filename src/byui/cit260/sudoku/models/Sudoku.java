@@ -2,6 +2,7 @@ package byui.cit260.sudoku.models;
 
 import byui.cit260.sudoku.exceptions.SudokuException;
 import byui.cit260.sudoku.views.MainMenuView;
+import byui.cit260.sudoku.frames.MainFrame;
 import java.util.Scanner; //Reads input from System.in
 
 /**
@@ -10,7 +11,7 @@ import java.util.Scanner; //Reads input from System.in
  */
 
 public class Sudoku {
-    
+    public static MainFrame mainFrame = null;
     private static Scanner inFile = new Scanner(System.in);
     
     private String welcomeMessage =
@@ -26,19 +27,24 @@ public class Sudoku {
         
     public static void main(String[] args) {
         try {
+            Sudoku sudoku = new Sudoku();
             
-        Sudoku sudoku = new Sudoku();
-        sudoku.display();
-        
-        MainMenuView mainMenu = new MainMenuView();
-        mainMenu.getInput(null);
+//          /* Create and display the form */
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    Sudoku.mainFrame = new MainFrame();
+                    Sudoku.mainFrame.setVisible(true);
+                }
+            });
         }
         catch (Throwable ex) {
             System.out.println(ex.getMessage());
             System.out.println(ex.getCause());
         }
         finally {
-            Sudoku.inFile.close();
+            if (Sudoku.mainFrame != null) {
+                Sudoku.mainFrame.dispose();
+            }
         }
     }
     

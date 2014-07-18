@@ -1,5 +1,7 @@
 package byui.cit260.sudoku.controls;
 
+import byui.cit260.sudoku.enums.HelpType;
+
 /**
  *
  * @author Keith Higbee, Jae Dillree, Josiah Hendricks, Jessie Gomez, Daniel Allen
@@ -11,6 +13,21 @@ public class HelpMenuControl extends SuperControl {
     public HelpMenuControl () {
         
     }
+    
+    public String getHelpText(HelpType input) {
+        String helpText = "";
+        switch (input) {
+            case BOARD:
+            case NUMBERS:
+            case PLAYER:
+            case STATISTICS:
+            case ENDGAME:
+                helpText = input.getHelpText();
+                break;
+        }
+        return helpText;
+    }
+    
     
     //menu option displayBoardHelp
     public static void displayBoardHelp() {
