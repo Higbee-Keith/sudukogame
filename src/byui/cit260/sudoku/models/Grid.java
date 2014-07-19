@@ -16,7 +16,7 @@ public class Grid implements Serializable {
     //declare variables and arrays
     private int[][] solution;
     private int[][] tempGame;
-    private int[][] game;  //generate game array
+    private Integer[][] game = new Integer[9][9];  //generate game array
     private Solution newSolution = new Solution();
     //List<Integer> gameCells = new ArrayList<Integer>();
     
@@ -40,11 +40,11 @@ public class Grid implements Serializable {
         this.tempGame = tempGame;
     }
 
-    public int[][] getGame() {
+    public Integer[][] getGame() {
         return game;
     }
 
-    public void setGame(int[][] game) {
+    public void setGame(Integer[][] game) {
         this.game = game;
     }
 
@@ -84,23 +84,23 @@ public class Grid implements Serializable {
         //temporary difficultyLevel
         int d = 36;
         
-        //game = createGame(tempGame, gameCells); 
         createGame(getTempGame(), d);
         //setGame(game);
     }
     
     //createGame method -- new
-    private int[][] createGame(int[][] tmpGame, int difficulty) {
+    private Integer[][] createGame(int[][] tmpGame, int difficulty) {
         Random rand = new Random();
+        convertGame(tmpGame);
         for(int i = 0; i < difficulty; i++){   
             int iRand = rand.nextInt(9); //get random number up to 9
             int jRand = rand.nextInt(9); //get random number up to 9
-            if (tmpGame[iRand][jRand] == 0)
+            if (game[iRand][jRand] == null)
                 continue;
             else
-                tmpGame[iRand][jRand] = 0;
+                game[iRand][jRand] = null;
         }
-        setGame(tmpGame); 
+        setGame(game); 
         //displays the tmpGame (tempGame with zeroes)
         //FOR DEBUGGING PURPOSES ONLY
         //print the game to the screen
@@ -116,6 +116,15 @@ public class Grid implements Serializable {
         return game;
     }
  
+    private Integer[][] convertGame(int[][] tmpGame) {
+        // convert int[] to Integer[]
+        for(int i = 0; i < tmpGame.length; i++) {
+            for (int j = 0; j < tmpGame[i].length; j++) {
+                game[j][i] = tmpGame[j][i];
+            }
+        }
+        return game;
+    }
     /*private void arrayShuffle() {
         //create new Integer array
         Integer[] numbers = new Integer[] {1, 2, 3, 4, 5, 6, 7, 8, 9};

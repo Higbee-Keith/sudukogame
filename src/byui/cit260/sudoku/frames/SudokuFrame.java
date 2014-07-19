@@ -19,12 +19,6 @@ public class SudokuFrame extends javax.swing.JFrame {
     
     private int[][] newgame;
     Integer[][] gameArray = new Integer[9][9];
-    
-//    for(int i=0; i < newgame.length; i++) {
-//        for (int j=0; j< newgame[i].length; j++) {
-//            gamedata[j][i] = newgame[j][i];
-//        }
-//    }
 
     /**
      * Creates new form SudokuFrame
@@ -32,13 +26,7 @@ public class SudokuFrame extends javax.swing.JFrame {
     public SudokuFrame() {
         Grid newGrid = new Grid();
         newGrid.newGame();
-        int[][] game = newGrid.getGame();
-        // convert int[] to Integer[]
-        for(int i = 0; i < game.length; i++) {
-            for (int j = 0; j < game[i].length; j++) {
-                gameArray[j][i] = game[j][i];
-            }
-        }
+        gameArray = newGrid.getGame();
         
         initComponents();
 
