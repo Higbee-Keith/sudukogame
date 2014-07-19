@@ -192,6 +192,8 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jpBtnNewGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpBtnNewGameActionPerformed
         // TODO add your handling code here:
+        SudokuFrame sudokuFrame = new SudokuFrame();
+        sudokuFrame.setVisible(true);
     }//GEN-LAST:event_jpBtnNewGameActionPerformed
 
     private void jpBtnPlayerOptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpBtnPlayerOptionsActionPerformed

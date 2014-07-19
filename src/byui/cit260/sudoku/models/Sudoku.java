@@ -23,6 +23,7 @@ public class Sudoku {
             + "\n";
 
     public Sudoku() {
+        
     }
         
     public static void main(String[] args) {

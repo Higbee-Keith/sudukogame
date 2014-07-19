@@ -17,7 +17,7 @@ public class GameDifficultyControl {
     }
     
     //declare variables
-    public int difficultyLevel;
+    private int difficultyLevel;
 
     public int getDifficultyLevel() {
         return difficultyLevel;
