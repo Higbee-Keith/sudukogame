@@ -58,12 +58,12 @@ public class SudokuFrame extends javax.swing.JFrame {
 
         jpGridHolder.setLayout(new java.awt.GridLayout(1, 0));
 
-        jpGrid.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jpGrid.setBackground(new java.awt.Color(204, 204, 204));
         jpGrid.setMaximumSize(new java.awt.Dimension(900, 625));
         jpGrid.setMinimumSize(null);
         jpGrid.setPreferredSize(new java.awt.Dimension(900, 625));
 
-        jpSudokuTitle.setBackground(new java.awt.Color(204, 255, 204));
+        jpSudokuTitle.setBackground(new java.awt.Color(204, 204, 204));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 60)); // NOI18N
         jLabel1.setText("Sudoku Game");
@@ -75,7 +75,7 @@ public class SudokuFrame extends javax.swing.JFrame {
             .addGroup(jpSudokuTitleLayout.createSequentialGroup()
                 .addGap(222, 222, 222)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(274, Short.MAX_VALUE))
+                .addContainerGap(276, Short.MAX_VALUE))
         );
         jpSudokuTitleLayout.setVerticalGroup(
             jpSudokuTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -85,7 +85,7 @@ public class SudokuFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jpTableHolder.setBackground(new java.awt.Color(204, 255, 204));
+        jpTableHolder.setBackground(new java.awt.Color(204, 204, 204));
 
         jtSudokuTable.setBackground(new java.awt.Color(204, 204, 204));
         jtSudokuTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -119,7 +119,7 @@ public class SudokuFrame extends javax.swing.JFrame {
             jpTableHolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpTableHolderLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 423, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 425, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

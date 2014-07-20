@@ -67,7 +67,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap(50, Short.MAX_VALUE))
         );
 
-        jpMenuItems.setBackground(new java.awt.Color(204, 255, 204));
+        jpMenuItems.setBackground(new java.awt.Color(204, 204, 204));
         jpMenuItems.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jpBtnNewGame.setText("New Game");
