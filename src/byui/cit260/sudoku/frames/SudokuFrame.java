@@ -52,7 +52,7 @@ public class SudokuFrame extends javax.swing.JFrame {
         jpTableHolder = new javax.swing.JPanel();
         jtSudokuTable = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
         jpGridHolder.setLayout(new java.awt.GridLayout(1, 0));
