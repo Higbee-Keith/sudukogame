@@ -15,12 +15,6 @@ public class GamePreferencesControl extends SuperControl {
         
     }
     
-    //menu option getGameBorder
-    public void displayGameBorder() {
-        GetGameBoard gameBoard = new GetGameBoard();
-        gameBoard.displayGameBorders();
-    }
-    
     //menu option displayGameDifficulty
     public void setGameDifficulty() {
         GameDifficultyView gameDifficulty = new GameDifficultyView();

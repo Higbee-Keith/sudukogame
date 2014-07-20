@@ -1,5 +1,5 @@
 package byui.cit260.sudoku.models;
-import byui.cit260.sudoku.controls.GameDifficultyControl;
+import byui.cit260.sudoku.frames.GameDifficultyFrame;
 import java.io.Serializable;
 import static java.lang.Math.random;
 import java.util.*;
@@ -78,25 +78,25 @@ public class Grid implements Serializable {
         //*/
         
         //get difficulty - not currently working
-        GameDifficultyControl gameDifficulty = new GameDifficultyControl();
-        int dif = gameDifficulty.getDifficultyLevel();
+        //GameDifficultyFrame gameDifficulty = new GameDifficultyFrame();
+        //int dif = gameDifficulty.diff;
         
         //temporary difficultyLevel
-        int d = 36;
-        
+        Random rand = new Random();
+        int d = rand.nextInt((65 - 35) +1) + 35; //get random value in range of 35 - 65
         createGame(getTempGame(), d);
         //setGame(game);
     }
     
     //createGame method -- new
-    private Integer[][] createGame(int[][] tmpGame, int difficulty) {
+    public Integer[][] createGame(int[][] tmpGame, int difficulty) {
         Random rand = new Random();
         convertGame(tmpGame);
         for(int i = 0; i < difficulty; i++){   
             int iRand = rand.nextInt(9); //get random number up to 9
             int jRand = rand.nextInt(9); //get random number up to 9
             if (game[iRand][jRand] == null)
-                continue;
+                i--; //location already null.  decrement i and start over
             else
                 game[iRand][jRand] = null;
         }

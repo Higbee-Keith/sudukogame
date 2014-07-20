@@ -5,6 +5,8 @@
  */
 
 package byui.cit260.sudoku.frames;
+
+import byui.cit260.sudoku.controls.GameDifficultyControl;
 import byui.cit260.sudoku.models.Grid;
 //import java.util.*;
 import java.awt.Color;
@@ -17,14 +19,16 @@ import javax.swing.*;
  */
 public class SudokuFrame extends javax.swing.JFrame {
     
-    private int[][] newgame;
-    Integer[][] gameArray = new Integer[9][9];
+    //private int[][] newgame;
+    Integer[][] gameArray = new Integer[9][9]; //variable used to fill the jTable
 
     /**
      * Creates new form SudokuFrame
      */
     public SudokuFrame() {
         Grid newGrid = new Grid();
+        //GameDifficultyControl gameDifficulty = new GameDifficultyControl();
+        //int d = gameDifficulty.getDifficultyLevel();
         newGrid.newGame();
         gameArray = newGrid.getGame();
         
@@ -48,10 +52,16 @@ public class SudokuFrame extends javax.swing.JFrame {
         jpTableHolder = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtSudokuTable = new javax.swing.JTable();
-        jpButtonHolder = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridLayout(1, 0));
+
+        jpGridHolder.setLayout(new java.awt.GridLayout(1, 0));
+
+        jpGrid.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jpGrid.setMaximumSize(new java.awt.Dimension(900, 625));
+        jpGrid.setMinimumSize(null);
+        jpGrid.setPreferredSize(new java.awt.Dimension(900, 625));
 
         jpSudokuTitle.setBackground(new java.awt.Color(204, 255, 204));
 
@@ -65,7 +75,7 @@ public class SudokuFrame extends javax.swing.JFrame {
             .addGroup(jpSudokuTitleLayout.createSequentialGroup()
                 .addGap(222, 222, 222)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(274, Short.MAX_VALUE))
         );
         jpSudokuTitleLayout.setVerticalGroup(
             jpSudokuTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -87,8 +97,9 @@ public class SudokuFrame extends javax.swing.JFrame {
                 "", "", "", "", "", "", "", "", ""
             }
         ));
-        jtSudokuTable.setColumnSelectionAllowed(false);
+        jtSudokuTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
         jtSudokuTable.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jtSudokuTable.setFillsViewportHeight(true);
         jtSudokuTable.setRowHeight(48);
         jtSudokuTable.setRowSelectionAllowed(false);
         jtSudokuTable.getTableHeader().setReorderingAllowed(false);
@@ -108,21 +119,8 @@ public class SudokuFrame extends javax.swing.JFrame {
             jpTableHolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpTableHolderLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 423, Short.MAX_VALUE)
                 .addContainerGap())
-        );
-
-        jpButtonHolder.setBackground(new java.awt.Color(204, 255, 204));
-
-        javax.swing.GroupLayout jpButtonHolderLayout = new javax.swing.GroupLayout(jpButtonHolder);
-        jpButtonHolder.setLayout(jpButtonHolderLayout);
-        jpButtonHolderLayout.setHorizontalGroup(
-            jpButtonHolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 217, Short.MAX_VALUE)
-        );
-        jpButtonHolderLayout.setVerticalGroup(
-            jpButtonHolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jpGridLayout = new javax.swing.GroupLayout(jpGrid);
@@ -134,8 +132,7 @@ public class SudokuFrame extends javax.swing.JFrame {
                 .addGroup(jpGridLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpGridLayout.createSequentialGroup()
                         .addComponent(jpTableHolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
-                        .addComponent(jpButtonHolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jpSudokuTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -145,28 +142,11 @@ public class SudokuFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jpSudokuTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jpGridLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jpTableHolder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jpButtonHolder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jpTableHolder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jpGridHolderLayout = new javax.swing.GroupLayout(jpGridHolder);
-        jpGridHolder.setLayout(jpGridHolderLayout);
-        jpGridHolderLayout.setHorizontalGroup(
-            jpGridHolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpGridHolderLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jpGrid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jpGridHolderLayout.setVerticalGroup(
-            jpGridHolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpGridHolderLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jpGrid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        jpGridHolder.add(jpGrid);
 
         getContentPane().add(jpGridHolder);
 
@@ -213,7 +193,6 @@ public class SudokuFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JPanel jpButtonHolder;
     private javax.swing.JPanel jpGrid;
     private javax.swing.JPanel jpGridHolder;
     private javax.swing.JPanel jpSudokuTitle;

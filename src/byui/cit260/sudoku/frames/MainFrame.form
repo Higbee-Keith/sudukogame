@@ -140,7 +140,7 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jpBtnPlayerOptions" alignment="0" max="32767" attributes="0"/>
                           <Component id="jpBtnNewGame" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jpBtnGamePreferences" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jpBtnGameDifficulty" alignment="0" max="32767" attributes="0"/>
                           <Component id="jpBtnHelp" alignment="0" max="32767" attributes="0"/>
                           <Component id="jpBtnExit" alignment="0" max="32767" attributes="0"/>
                       </Group>
@@ -156,7 +156,7 @@
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                       <Component id="jpBtnPlayerOptions" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Component id="jpBtnGamePreferences" min="-2" max="-2" attributes="0"/>
+                      <Component id="jpBtnGameDifficulty" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="jpBtnHelp" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
@@ -184,12 +184,12 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jpBtnPlayerOptionsActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jpBtnGamePreferences">
+            <Component class="javax.swing.JButton" name="jpBtnGameDifficulty">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Preferences"/>
+                <Property name="text" type="java.lang.String" value="Difficulty"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jpBtnGamePreferencesActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jpBtnGameDifficultyActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jpBtnHelp">

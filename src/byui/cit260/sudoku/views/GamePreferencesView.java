@@ -19,7 +19,6 @@ public class GamePreferencesView extends Menu implements EnterInfo {
     
     //create an array of Strings for the help menu items
     private final static String[][] menuItems = {
-        {"B", "Display game board"},
         {"D", "Game difficulty"},
         {"R", "Return to main menu"}
     };
@@ -38,9 +37,6 @@ public class GamePreferencesView extends Menu implements EnterInfo {
                 //get the input command entered by user
                 String input = this.getCommand();
                 switch (input) {
-                    case "B":
-                        this.gamePreferencesControl.displayGameBorder();
-                        break;
                     case "D":
                         this.gamePreferencesControl.setGameDifficulty();
                         break;

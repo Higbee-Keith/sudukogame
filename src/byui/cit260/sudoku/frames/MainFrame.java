@@ -33,7 +33,7 @@ public class MainFrame extends javax.swing.JFrame {
         jpMenuItems = new javax.swing.JPanel();
         jpBtnNewGame = new javax.swing.JButton();
         jpBtnPlayerOptions = new javax.swing.JButton();
-        jpBtnGamePreferences = new javax.swing.JButton();
+        jpBtnGameDifficulty = new javax.swing.JButton();
         jpBtnHelp = new javax.swing.JButton();
         jpBtnExit = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -85,10 +85,10 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jpBtnGamePreferences.setText("Preferences");
-        jpBtnGamePreferences.addActionListener(new java.awt.event.ActionListener() {
+        jpBtnGameDifficulty.setText("Difficulty");
+        jpBtnGameDifficulty.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jpBtnGamePreferencesActionPerformed(evt);
+                jpBtnGameDifficultyActionPerformed(evt);
             }
         });
 
@@ -115,7 +115,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jpBtnPlayerOptions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jpBtnNewGame, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jpBtnGamePreferences, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jpBtnGameDifficulty, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jpBtnHelp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jpBtnExit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -128,7 +128,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addComponent(jpBtnPlayerOptions)
                 .addGap(28, 28, 28)
-                .addComponent(jpBtnGamePreferences)
+                .addComponent(jpBtnGameDifficulty)
                 .addGap(30, 30, 30)
                 .addComponent(jpBtnHelp)
                 .addGap(27, 27, 27)
@@ -200,9 +200,11 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jpBtnPlayerOptionsActionPerformed
 
-    private void jpBtnGamePreferencesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpBtnGamePreferencesActionPerformed
+    private void jpBtnGameDifficultyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpBtnGameDifficultyActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jpBtnGamePreferencesActionPerformed
+        GameDifficultyFrame difficultyFrame = new GameDifficultyFrame();
+        difficultyFrame.setVisible(true);
+    }//GEN-LAST:event_jpBtnGameDifficultyActionPerformed
 
     private void jpBtnHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpBtnHelpActionPerformed
         HelpFrame helpFrame = new HelpFrame();
@@ -217,7 +219,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel jpBody;
     private javax.swing.JButton jpBtnExit;
-    private javax.swing.JButton jpBtnGamePreferences;
+    private javax.swing.JButton jpBtnGameDifficulty;
     private javax.swing.JButton jpBtnHelp;
     private javax.swing.JButton jpBtnNewGame;
     private javax.swing.JButton jpBtnPlayerOptions;
