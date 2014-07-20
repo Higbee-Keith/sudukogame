@@ -50,7 +50,6 @@ public class SudokuFrame extends javax.swing.JFrame {
         jpSudokuTitle = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jpTableHolder = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
         jtSudokuTable = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -60,7 +59,6 @@ public class SudokuFrame extends javax.swing.JFrame {
 
         jpGrid.setBackground(new java.awt.Color(204, 204, 204));
         jpGrid.setMaximumSize(new java.awt.Dimension(900, 625));
-        jpGrid.setMinimumSize(null);
         jpGrid.setPreferredSize(new java.awt.Dimension(900, 625));
 
         jpSudokuTitle.setBackground(new java.awt.Color(204, 204, 204));
@@ -87,7 +85,6 @@ public class SudokuFrame extends javax.swing.JFrame {
 
         jpTableHolder.setBackground(new java.awt.Color(204, 204, 204));
 
-        jtSudokuTable.setBackground(new java.awt.Color(204, 204, 204));
         jtSudokuTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jtSudokuTable.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jtSudokuTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -103,25 +100,25 @@ public class SudokuFrame extends javax.swing.JFrame {
         jtSudokuTable.setRowHeight(48);
         jtSudokuTable.setRowSelectionAllowed(false);
         jtSudokuTable.getTableHeader().setReorderingAllowed(false);
-        jScrollPane1.setViewportView(jtSudokuTable);
-        jtSudokuTable.getAccessibleContext().setAccessibleParent(jpTableHolder);
 
         javax.swing.GroupLayout jpTableHolderLayout = new javax.swing.GroupLayout(jpTableHolder);
         jpTableHolder.setLayout(jpTableHolderLayout);
         jpTableHolderLayout.setHorizontalGroup(
             jpTableHolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpTableHolderLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(0, 16, Short.MAX_VALUE)
+                .addComponent(jtSudokuTable, javax.swing.GroupLayout.PREFERRED_SIZE, 564, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 16, Short.MAX_VALUE))
         );
         jpTableHolderLayout.setVerticalGroup(
             jpTableHolderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpTableHolderLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 425, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpTableHolderLayout.createSequentialGroup()
+                .addContainerGap(19, Short.MAX_VALUE)
+                .addComponent(jtSudokuTable, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
+
+        jtSudokuTable.getAccessibleContext().setAccessibleParent(jpTableHolder);
 
         javax.swing.GroupLayout jpGridLayout = new javax.swing.GroupLayout(jpGrid);
         jpGrid.setLayout(jpGridLayout);
@@ -142,8 +139,8 @@ public class SudokuFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jpSudokuTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jpTableHolder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jpTableHolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jpGridHolder.add(jpGrid);
@@ -192,7 +189,6 @@ public class SudokuFrame extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel jpGrid;
     private javax.swing.JPanel jpGridHolder;
     private javax.swing.JPanel jpSudokuTitle;
