@@ -50,7 +50,7 @@ public class HelpFrame extends javax.swing.JFrame {
         jBtnEndGameHelp = new javax.swing.JButton();
         jBtnExitHelp = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Sudoku Help");
         setPreferredSize(new java.awt.Dimension(900, 675));
 
